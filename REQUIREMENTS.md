@@ -26,4 +26,4 @@ Environment variables (Docker)
 Dataset (separate Zenodo publication)
 =====================================
 - Full evaluation data is published separately under CC-BY 4.0
-- Dataset DOI: `10.5281/zenodo.20792734` (hardcoded in `src/utils/artifact_config.py`)
+- Dataset DOI: `10.5281/zenodo.20792733` (hardcoded in `src/utils/artifact_config.py`)

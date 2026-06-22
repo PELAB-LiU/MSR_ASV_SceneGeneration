@@ -10,8 +10,8 @@ Published MODELS26 artifacts on Zenodo (for reviewers and offline use):
 
 | Artifact | Zenodo record | License |
 |----------|---------------|---------|
-| Software code | [10.5281/zenodo.19246757](https://doi.org/10.5281/zenodo.19246757) | MIT |
-| Measurement data | [10.5281/zenodo.20792734](https://doi.org/10.5281/zenodo.20792734) | CC-BY 4.0 |
+| Software code | [10.5281/zenodo.19246756](https://doi.org/10.5281/zenodo.19246756) | MIT |
+| Measurement data | [10.5281/zenodo.20792733](https://doi.org/10.5281/zenodo.20792733) | CC-BY 4.0 |
 
 Download `MSR_ASV_SceneGeneration-main.zip` from the software record, or clone from GitHub (see [Installation](#installation)). Load measurement files from the data record via **Data Manager -> Download from Zenodo**, or upload a downloaded `.pkl.gz` manually.
 

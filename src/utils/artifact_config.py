@@ -10,7 +10,7 @@ from urllib.parse import urlparse
 
 import requests
 
-ZENODO_DATASET_DOI = "10.5281/zenodo.20792734"
+ZENODO_DATASET_DOI = "10.5281/zenodo.20792733"
 
 ZENODO_MEASUREMENT_FILES = (
     "main_measurements.pkl.gz",

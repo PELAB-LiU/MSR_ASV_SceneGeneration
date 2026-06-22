@@ -90,7 +90,7 @@ with tab_load:
         "Zenodo record DOI or URL",
         key="zenodo_record_doi",
         help=(
-            "Examples: 10.5281/zenodo.20792734, " "https://zenodo.org/records/20792734"
+            "Examples: 10.5281/zenodo.20792733, " "https://zenodo.org/records/20792733"
         ),
     )
     if st.button("Download from Zenodo", disabled=disable_if_job_running()):

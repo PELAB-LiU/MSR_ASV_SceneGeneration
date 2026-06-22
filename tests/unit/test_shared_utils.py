@@ -131,10 +131,10 @@ class TestArtifactConfig:
     @pytest.mark.parametrize(
         "doi,expected",
         [
-            ("https://zenodo.org/records/20792734", "20792734"),
-            ("10.5281/zenodo.20792734", "20792734"),
-            ("https://doi.org/10.5281/zenodo.20792734", "20792734"),
-            ("20792734", "20792734"),
+            ("https://zenodo.org/records/20792733", "20792733"),
+            ("10.5281/zenodo.20792733", "20792733"),
+            ("https://doi.org/10.5281/zenodo.20792733", "20792733"),
+            ("20792733", "20792733"),
         ],
     )
     def test_zenodo_record_id_from_doi(self, doi: str, expected: str) -> None:
@@ -145,7 +145,7 @@ class TestArtifactConfig:
         mock_response.json.return_value = {"id": "1", "files": []}
         mock_response.raise_for_status = MagicMock()
         with patch("utils.artifact_config.requests.get", return_value=mock_response):
-            record = fetch_zenodo_record("20792734")
+            record = fetch_zenodo_record("20792733")
         assert record["id"] == "1"
 
     def test_download_zenodo_dataset_writes_files(self, tmp_path: Path) -> None:
