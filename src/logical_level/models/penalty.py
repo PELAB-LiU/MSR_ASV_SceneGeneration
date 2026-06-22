@@ -61,7 +61,7 @@ class Penalty:
         if actors is None:
             return "\n".join(
                 [
-                    f"{key[0].name} → {key[1].name} : {json.dumps(value, indent=3)}"
+                    f"{key[0].name} -> {key[1].name} : {json.dumps(value, indent=3)}"
                     for key, value in self.info.items()
                 ]
             )

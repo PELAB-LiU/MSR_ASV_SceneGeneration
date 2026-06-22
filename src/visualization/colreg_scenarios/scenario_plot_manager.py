@@ -301,7 +301,7 @@ class ScenarioPlotManager:
             col = self.create_colreg_control_col(light_colors[actor2.id])
             rel_label = tk.Label(
                 master=col,
-                text=rf"{self.trajectory_manger.scenario.get_actor_name(actor1)} → {self.trajectory_manger.scenario.get_actor_name(actor2)}",
+                text=rf"{self.trajectory_manger.scenario.get_actor_name(actor1)} -> {self.trajectory_manger.scenario.get_actor_name(actor2)}",
                 background=light_colors[actor1.id],
             )
             rel_label.bind(
@@ -335,7 +335,7 @@ class ScenarioPlotManager:
         var2 = self.trajectory_manger.scenario.to_variable(actor2)
 
         popup = tk.Toplevel()
-        popup.title(f"{var1.name} → {var2.name}")
+        popup.title(f"{var1.name} -> {var2.name}")
         popup.geometry("500x500")  # Set custom width and height
         popup.resizable(True, True)
 
@@ -348,7 +348,7 @@ class ScenarioPlotManager:
             ]
         )
         text = f"""
-        Information about: {actor1} → {actor2}
+        Information about: {actor1} -> {actor2}
         
         {self.trajectory_manger.scenario.penalty.pretty_info((var1, var2))}
         

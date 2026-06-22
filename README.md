@@ -141,7 +141,7 @@ Docker provides a reproducible environment matching the MODELS26 artifact evalua
 
 #### Zenodo dataset
 
-The full evaluation dataset is published on Zenodo at **`10.5281/zenodo.20792734`**. This DOI is hardcoded in `src/utils/artifact_config.py` and used by **Data Manager → Download from Zenodo**.
+The full evaluation dataset is published on Zenodo at **`10.5281/zenodo.20792734`**. This DOI is hardcoded in `src/utils/artifact_config.py` and used by **Data Manager -> Download from Zenodo**.
 
 #### Docker troubleshooting
 
@@ -299,7 +299,7 @@ Cancelling a running **scene generation**, **hyperparameter tuning**, or **traje
 
 ### Active dataset
 
-Many pages require a **loaded dataset** (a `.pkl.gz` file selected in **Data Manager → Load**). The UI stores only the file name in session state; the file itself remains on the server under `ARTIFACT_DATA_DIR/uploads` or the Zenodo cache.
+Many pages require a **loaded dataset** (a `.pkl.gz` file selected in **Data Manager -> Load**). The UI stores only the file name in session state; the file itself remains on the server under `ARTIFACT_DATA_DIR/uploads` or the Zenodo cache.
 
 ### Plots in the browser
 
@@ -312,7 +312,7 @@ Many pages require a **loaded dataset** (a `.pkl.gz` file selected in **Data Man
 ### Home
 
 - Introduces the MODELS26 artifact goals and badge targets (**Artifact Evaluated: Reusable**, **Artifact Available**).
-- Explains the recommended **compress → annotate → load** workflow with a diagram (`assets/images/usage.png`).
+- Explains the recommended **compress -> annotate -> load** workflow with a diagram (`assets/images/usage.png`).
 - Lists a **kick-the-tires checklist** and a **global time budget** table (worst-case formulas for scene generation, hyperparameter tuning, trajectories, and data utilities).
 
 ### Data Manager
@@ -422,7 +422,7 @@ Scene generation produces many separate JSON files on the server. For practical 
 Designed to complete on a commodity laptop without full paper-scale runtime:
 
 1. Start the demonstrator (`docker compose up --build` or local Streamlit).
-2. **Data Manager → Load**: upload a small `.pkl.gz` or download from Zenodo (if bandwidth allows; Zenodo download may take longer than 30 minutes for the full dataset).
+2. **Data Manager -> Load**: upload a small `.pkl.gz` or download from Zenodo (if bandwidth allows; Zenodo download may take longer than 30 minutes for the full dataset).
 3. **Scenario Browser**: inspect the table; render one COLREG scene.
 4. **Evaluation Plots**: generate one plot type from the loaded dataset.
 5. **Scene Generation**: minimal run: **1 seed**, **1 approach** (e.g. MSR CDRS+PS), **2 or 3 vessels**, **1 core**.
@@ -460,7 +460,7 @@ After generation, follow the [recommended data workflow](#recommended-data-workf
 
 The artifact UI does **not** bundle the full dataset inside the Docker image. Acquire it by:
 
-- **Data Manager → Download from Zenodo**, or
+- **Data Manager -> Download from Zenodo**, or
 - Uploading previously downloaded `.pkl.gz` / JSON measurements from the paper authors' archive.
 
 ---
@@ -526,7 +526,6 @@ High-level layout of the research codebase (the UI orchestrates these modules; y
 ├── docker-compose.yml
 ├── Dockerfile
 ├── package.json               # Pinned Python dependencies
-└── MODELS26_measurements/     # Paper evaluation data / summaries (if included)
 ```
 
 ### Research components (brief)

@@ -36,7 +36,7 @@ else:
 
 st.subheader("Kick-the-tires checklist (~30 minutes)")
 st.markdown("""
-1. **Data Manager → Load**: upload a dataset or download from Zenodo
+1. **Data Manager -> Load**: upload a dataset or download from Zenodo
 2. **Scenario Browser**: inspect records and COLREG scene plots
 3. **Evaluation Plots**: render paper-style figures from the loaded dataset
 4. **Scene Generation**: run a minimal configuration (1 seed, 1 approach, 2 vessels, 1 core)

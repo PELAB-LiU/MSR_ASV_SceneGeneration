@@ -13,7 +13,9 @@ from artifact_ui.components.running_state import (disable_if_job_running,
                                                   launch_job)
 from artifact_ui.components.time_estimator import (estimate_data_utility,
                                                    format_duration)
-from utils.artifact_config import ArtifactConfig, resolve_zenodo_pkl
+from utils.artifact_config import (ZENODO_MEASUREMENT_FILES, ArtifactConfig,
+                                   list_zenodo_measurement_files,
+                                   resolve_zenodo_pkl)
 
 st.title("Data Manager")
 
@@ -78,15 +80,49 @@ with tab_load:
     )
 
     st.subheader("Download full dataset from Zenodo")
-    st.caption(f"Zenodo record DOI: {config.zenodo_record_doi}")
+    st.caption(
+        "Downloads every file from the Zenodo record into the artifact data folder "
+        "and packages the full record as a zip you can save to your computer."
+    )
+    if "zenodo_record_doi" not in st.session_state:
+        st.session_state.zenodo_record_doi = config.zenodo_record_doi
+    zenodo_doi = st.text_input(
+        "Zenodo record DOI or URL",
+        key="zenodo_record_doi",
+        help=(
+            "Examples: 10.5281/zenodo.20792734, " "https://zenodo.org/records/20792734"
+        ),
+    )
     if st.button("Download from Zenodo", disabled=disable_if_job_running()):
-        launch_job("zenodo_download", {})
+        launch_job("zenodo_download", {"zenodo_record_doi": zenodo_doi})
 
-    zenodo_pkl = resolve_zenodo_pkl(config)
-    if zenodo_pkl is not None:
+    zenodo_measurements = list_zenodo_measurement_files(config)
+    if zenodo_measurements:
+        st.caption("Select which measurement archive to use for browsing and plots.")
+        measurement_labels = [path.name for path in zenodo_measurements]
+        if "zenodo_measurement_choice" not in st.session_state:
+            st.session_state.zenodo_measurement_choice = measurement_labels[0]
+        if st.session_state.zenodo_measurement_choice not in measurement_labels:
+            st.session_state.zenodo_measurement_choice = measurement_labels[0]
+        selected_name = st.selectbox(
+            "Measurement dataset",
+            options=measurement_labels,
+            key="zenodo_measurement_choice",
+        )
+        zenodo_pkl = resolve_zenodo_pkl(config, filename=selected_name)
         if st.button("Load Zenodo dataset", disabled=disable_if_job_running()):
-            set_active_dataset(str(zenodo_pkl))
-            st.success(f"Loaded {zenodo_pkl.name} for browsing and plotting.")
+            if zenodo_pkl is not None:
+                set_active_dataset(str(zenodo_pkl))
+                st.success(f"Loaded {zenodo_pkl.name} for browsing and plotting.")
+            else:
+                st.error(f"Measurement file not found: {selected_name}")
+    elif (config.data_dir / "full").is_dir() and any(
+        (config.data_dir / "full").iterdir()
+    ):
+        st.info(
+            "Zenodo files are on disk, but no known measurement archives were found. "
+            f"Expected one of: {', '.join(ZENODO_MEASUREMENT_FILES)}"
+        )
 
     st.subheader("Active dataset")
     current_name = active_dataset_name()

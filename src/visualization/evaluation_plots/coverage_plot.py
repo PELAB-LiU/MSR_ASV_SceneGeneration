@@ -1,23 +1,18 @@
 from abc import abstractmethod
 from itertools import combinations
-from typing import Dict, List, Set, Tuple
+from typing import Dict, List, Tuple
 
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib import gridspec
 from pyparsing import ABC
 
-from concrete_level.models.trajectory_manager import TrajectoryManager
 from evaluation.mann_whitney_u_cliff_delta import MannWhitneyUCliffDelta
 from functional_level.models.model_parser import ModelParser
-from global_config import GlobalConfig
 from logical_level.constraint_satisfaction.evaluation_data import \
     EvaluationData
-from utils.evaluation_config import (DC_RS, DC_RS_PS, DC_SB_II, DC_SB_III,
-                                     MSR_CDRS, MSR_CDRS_PS, MSR_SB_II,
+from utils.evaluation_config import (DC_RS, DC_SB_II, DC_SB_III, MSR_CDRS_PS,
                                      MSR_SB_III)
-from visualization.colreg_scenarios.scenario_plot_manager import \
-    ScenarioPlotManager
 from visualization.plotting_utils import EvalPlot
 
 

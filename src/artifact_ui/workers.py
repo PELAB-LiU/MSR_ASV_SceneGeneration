@@ -210,10 +210,17 @@ def worker_zenodo_download(job_dir: str, config_dict: Dict[str, Any]) -> None:
     job_path = Path(job_dir)
     log_path = job_path / "run.log"
     try:
+        from dataclasses import replace
+
         from utils.artifact_config import (ArtifactConfig,
                                            download_zenodo_dataset)
 
         artifact_config = ArtifactConfig.from_env()
+        zenodo_doi = config_dict.get("zenodo_record_doi")
+        if zenodo_doi:
+            artifact_config = replace(
+                artifact_config, zenodo_record_doi=str(zenodo_doi)
+            )
         target = Path(config_dict.get("target_dir", artifact_config.data_dir / "full"))
         download_zenodo_dataset(
             artifact_config,

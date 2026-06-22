@@ -30,7 +30,7 @@ def require_active_dataset() -> str:
     path = active_dataset_path()
     if not path:
         st.warning(
-            "Load a dataset from **Data Manager → Load** first "
+            "Load a dataset from **Data Manager -> Load** first "
             "(upload from your computer or download from Zenodo)."
         )
         st.stop()

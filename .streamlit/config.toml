@@ -2,6 +2,10 @@
 maxUploadSize = 300
 maxMessageSize = 300
 headless = true
+address = "0.0.0.0"
+port = 8501
 
 [browser]
 gatherUsageStats = false
+serverAddress = "localhost"
+serverPort = 8501

@@ -11,7 +11,9 @@ import pytest
 
 import utils.file_system_utils as file_system_utils
 from utils.artifact_config import (ArtifactConfig, download_zenodo_dataset,
-                                   fetch_zenodo_record, resolve_zenodo_pkl,
+                                   fetch_zenodo_record,
+                                   list_zenodo_measurement_files,
+                                   resolve_zenodo_pkl,
                                    zenodo_record_id_from_doi)
 from utils.cached_property import CachedProperty
 from utils.colors import lighten_color, mix_colors
@@ -130,7 +132,9 @@ class TestArtifactConfig:
         "doi,expected",
         [
             ("https://zenodo.org/records/20792734", "20792734"),
-            ("10.5281/zenodo.20792734", "zenodo.20792734"),
+            ("10.5281/zenodo.20792734", "20792734"),
+            ("https://doi.org/10.5281/zenodo.20792734", "20792734"),
+            ("20792734", "20792734"),
         ],
     )
     def test_zenodo_record_id_from_doi(self, doi: str, expected: str) -> None:
@@ -203,9 +207,37 @@ class TestArtifactConfig:
         full.mkdir(parents=True)
         preferred = full / "main_measurements.pkl.gz"
         preferred.write_bytes(b"1")
-        other = full / "other.pkl.gz"
+        other = full / "msr_measurements_for_full_coverage.pkl.gz"
         other.write_bytes(b"2")
         assert resolve_zenodo_pkl(config) == preferred
+
+    def test_resolve_zenodo_pkl_by_filename(self, tmp_path: Path) -> None:
+        config = ArtifactConfig(
+            data_dir=tmp_path / "data",
+            output_dir=tmp_path / "output",
+            zenodo_record_doi="10.5281/zenodo.1",
+            jobs_dir=tmp_path / "jobs",
+        )
+        full = config.data_dir / "full"
+        full.mkdir(parents=True)
+        main = full / "main_measurements.pkl.gz"
+        main.write_bytes(b"1")
+        msr = full / "msr_measurements_for_full_coverage.pkl.gz"
+        msr.write_bytes(b"2")
+        assert resolve_zenodo_pkl(config, filename=msr.name) == msr
+
+    def test_list_zenodo_measurement_files(self, tmp_path: Path) -> None:
+        config = ArtifactConfig(
+            data_dir=tmp_path / "data",
+            output_dir=tmp_path / "output",
+            zenodo_record_doi="10.5281/zenodo.1",
+            jobs_dir=tmp_path / "jobs",
+        )
+        full = config.data_dir / "full"
+        full.mkdir(parents=True)
+        main = full / "main_measurements.pkl.gz"
+        main.write_bytes(b"1")
+        assert list_zenodo_measurement_files(config) == [main]
 
     def test_resolve_zenodo_pkl_returns_none_when_missing(self, tmp_path: Path) -> None:
         config = ArtifactConfig(

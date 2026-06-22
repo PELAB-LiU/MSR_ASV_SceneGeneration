@@ -11,6 +11,8 @@ Artifact Evaluated (Reusable):
 - User-configurable scene generation (approaches, vessel counts, seeds, cores)
 - Subprocess isolation for long jobs with persistent running-state UI and log streaming
 - Full and supplementary dataset via separate Zenodo DOI
+- Detailed technical documentation.
+- Packaging.
 
 Artifact Available:
 - MIT LICENSE for software
@@ -20,5 +22,4 @@ Artifact Available:
 
 Functional reproduction:
 - Kick-the-tires path completes in under 30 minutes on a commodity laptop
-- Paper summary statistics verifiable against bundled measurement_result_summary/
 - Worst-case runtime estimates shown before every long operation

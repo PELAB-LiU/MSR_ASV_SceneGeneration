@@ -12,6 +12,11 @@ import requests
 
 ZENODO_DATASET_DOI = "10.5281/zenodo.20792734"
 
+ZENODO_MEASUREMENT_FILES = (
+    "main_measurements.pkl.gz",
+    "msr_measurements_for_full_coverage.pkl.gz",
+)
+
 
 @dataclass(frozen=True)
 class ArtifactConfig:
@@ -41,11 +46,16 @@ class ArtifactConfig:
 
 
 def zenodo_record_id_from_doi(doi: str) -> str:
+    """Extract numeric Zenodo record id from a DOI, URL, or bare record id."""
     doi = doi.strip()
     if doi.startswith("http"):
         path = urlparse(doi).path.strip("/")
-        return path.split("/")[-1]
-    return doi.split("/")[-1]
+        token = path.split("/")[-1]
+    else:
+        token = doi.split("/")[-1]
+    if token.startswith("zenodo."):
+        return token.removeprefix("zenodo.")
+    return token
 
 
 def fetch_zenodo_record(record_id: str) -> dict:
@@ -87,12 +97,28 @@ def download_zenodo_dataset(
     return target
 
 
-def resolve_zenodo_pkl(config: ArtifactConfig) -> Optional[Path]:
+def list_zenodo_measurement_files(config: ArtifactConfig) -> list[Path]:
+    """Return known Zenodo measurement archives present under data_dir/full."""
+    full_dir = config.data_dir / "full"
+    return [
+        full_dir / name
+        for name in ZENODO_MEASUREMENT_FILES
+        if (full_dir / name).is_file()
+    ]
+
+
+def resolve_zenodo_pkl(
+    config: ArtifactConfig, filename: Optional[str] = None
+) -> Optional[Path]:
     """Return a compressed dataset downloaded from Zenodo, if present on disk."""
     full_dir = config.data_dir / "full"
-    preferred = full_dir / "main_measurements.pkl.gz"
-    if preferred.is_file():
-        return preferred
+    if filename:
+        path = full_dir / filename
+        return path if path.is_file() else None
+    for name in ZENODO_MEASUREMENT_FILES:
+        path = full_dir / name
+        if path.is_file():
+            return path
     if full_dir.is_dir():
         for path in sorted(full_dir.glob("*.pkl.gz")):
             return path
