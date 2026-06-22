@@ -171,7 +171,7 @@ Use this path when Docker is unavailable or when developing changes to the UI. T
 1. **Clone the repository**
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/PELAB-LiU/MSR_ASV_SceneGeneration.git
    cd MSR_ASV_SceneGeneration
    ```
 
