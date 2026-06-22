@@ -63,7 +63,7 @@ All artifact evaluation workflows are exposed through a **browser-based Streamli
 
 Long-running operations (scene generation, hyperparameter tuning, trajectory generation, Zenodo download, data compression) run in **isolated background worker processes**. The UI remains responsive, shows live logs, supports cancellation, and offers **download buttons** for completed or partially completed results directly in the browser.
 
-The full measurement dataset used in the paper is published separately on Zenodo (CC-BY 4.0). A summary of paper results may also be available in the repository under `MODELS26_measurements/` for verification without re-running generation.
+The full measurement dataset used in the paper and a summary of paper results are published separately on Zenodo (CC-BY 4.0).
 
 ---
 
@@ -72,7 +72,7 @@ The full measurement dataset used in the paper is published separately on Zenodo
 If Docker is installed, the fastest path to the demonstrator is:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/PELAB-LiU/MSR_ASV_SceneGeneration.git
 cd MSR_ASV_SceneGeneration
 docker compose up --build
 ```
@@ -102,7 +102,7 @@ Docker provides a reproducible environment matching the MODELS26 artifact evalua
 1. **Clone the repository**
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/PELAB-LiU/MSR_ASV_SceneGeneration.git
    cd MSR_ASV_SceneGeneration
    ```
 
@@ -131,7 +131,7 @@ Docker provides a reproducible environment matching the MODELS26 artifact evalua
 
    Navigate to **http://localhost:8501**.
 
-5. **Stop the artifact**
+5. **Stopping**
 
    Press `Ctrl+C` in the terminal, or:
 
@@ -457,12 +457,11 @@ After generation, follow the [recommended data workflow](#recommended-data-workf
 |-------|----------|---------|
 | Software (this repository) | Git / Zenodo software record | MIT |
 | Full evaluation dataset | Zenodo `10.5281/zenodo.20792734` (hardcoded in artifact config) | CC-BY 4.0 |
-| Paper result summary | `MODELS26_measurements/` in repository (if present) | See dataset record |
 
 The artifact UI does **not** bundle the full dataset inside the Docker image. Acquire it by:
 
 - **Data Manager → Download from Zenodo**, or
-- Uploading your own `.pkl.gz` / JSON measurements from the paper authors' archive.
+- Uploading previously downloaded `.pkl.gz` / JSON measurements from the paper authors' archive.
 
 ---
 
