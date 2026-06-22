@@ -22,6 +22,7 @@ This repository is supplementary material for the paper **Automated Generation o
       - [Docker troubleshooting](#docker-troubleshooting)
     - [Local installation without Docker](#local-installation-without-docker)
       - [Prerequisites](#prerequisites-1)
+      - [Linux system packages (non-Docker only)](#linux-system-packages-non-docker-only)
       - [Step-by-step](#step-by-step-1)
       - [Local upload size limit](#local-upload-size-limit)
   - [Running the web demonstrator](#running-the-web-demonstrator)
@@ -71,11 +72,15 @@ The full measurement dataset used in the paper and a summary of paper results ar
 
 If Docker is installed, the fastest path to the demonstrator is:
 
+Clone the repository, or unzip a downloaded source archive (from GitHub or Zenodo), then from the project root:
+
 ```bash
 git clone https://github.com/PELAB-LiU/MSR_ASV_SceneGeneration.git
 cd MSR_ASV_SceneGeneration
 docker compose up --build
 ```
+
+If you used a zip archive instead of `git clone`, skip the clone step and `cd` into the extracted folder before running `docker compose up --build`.
 
 Open **http://localhost:8501** in a web browser.
 
@@ -99,12 +104,18 @@ Docker provides a reproducible environment matching the MODELS26 artifact evalua
 
 #### Step-by-step
 
-1. **Clone the repository**
+1. **Obtain the source**
+
+   Clone the repository, or unzip a downloaded source archive (from GitHub or Zenodo), and open a terminal in the project root.
+
+   With git:
 
    ```bash
    git clone https://github.com/PELAB-LiU/MSR_ASV_SceneGeneration.git
    cd MSR_ASV_SceneGeneration
    ```
+
+   If you extracted a zip archive, `cd` into the extracted folder instead.
 
 2. **Review `docker-compose.yml`** (optional)
 
@@ -166,14 +177,36 @@ Use this path when Docker is unavailable or when developing changes to the UI. T
 - **4+ CPU cores** and **8+ GB RAM** recommended
 - A modern web browser
 
+#### Linux system packages (non-Docker only)
+
+On Debian/Ubuntu Linux, install native libraries required by **scipy**, **pygame**, and **matplotlib** before running the Python dependency installer. The Docker image installs these automatically via `apt-get`; Windows and macOS pip wheels usually bundle what they need.
+
+```bash
+sudo apt-get update && sudo apt-get install -y --no-install-recommends \
+    libgl1 \
+    libglib2.0-0 \
+    libgomp1 \
+    libsm6 \
+    libxext6 \
+    libxrender1
+```
+
+A full desktop Ubuntu install may already include these packages. If `python scripts/install_dependencies.py` succeeds but imports fail with a missing shared-library error (for example `libgomp.so` or `libGL.so`), run the command above.
+
 #### Step-by-step
 
-1. **Clone the repository**
+1. **Obtain the source**
+
+   Clone the repository, or unzip a downloaded source archive (from GitHub or Zenodo), and open a terminal in the project root.
+
+   With git:
 
    ```bash
    git clone https://github.com/PELAB-LiU/MSR_ASV_SceneGeneration.git
    cd MSR_ASV_SceneGeneration
    ```
+
+   If you extracted a zip archive, `cd` into the extracted folder instead.
 
 2. **Create and activate a virtual environment**
 
