@@ -1,0 +1,62 @@
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+env/
+venv/
+.venv/
+
+# Test and coverage artifacts
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Logs and local outputs
+report.log
+*.log
+data/
+output/
+
+# Large generated / evaluation data
+**/assets/gen_data/**
+**/assets/side_measurements/**
+MODELS26_measurements/
+**/compressed.json
+**/compressed.pkl.gz
+**/compressed_for_plotting.pkl.gz
+
+# LaTeX
+**/*.fls
+**/*.fdb_latexmk
+**/*.aux
+**/*.synctex.gz
+
+# Media (local only)
+media/**
+
+# IDE / OS
+.idea/
+.cursor/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Node (package.json is used for dependency pinning only)
+node_modules/
+
+# Legacy test package path that shadows src/utils
+tests/utils/

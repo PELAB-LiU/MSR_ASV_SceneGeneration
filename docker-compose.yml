@@ -1,0 +1,19 @@
+services:
+  artifact-ui:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/data
+      - ./output:/output
+    environment:
+      PYTHONPATH: /app/src
+      PYTHONIOENCODING: utf-8
+      PYTHONUTF8: "1"
+      ARTIFACT_DATA_DIR: /data
+      ARTIFACT_OUTPUT_DIR: /output
+      MPLBACKEND: Agg
+      ENABLE_RRT_ANIMATION: "false"
+      STREAMLIT_SERVER_MAX_UPLOAD_SIZE: "300"
+      STREAMLIT_SERVER_MAX_MESSAGE_SIZE: "300"
+    shm_size: "2gb"

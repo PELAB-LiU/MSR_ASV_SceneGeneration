@@ -1,0 +1,151 @@
+enum VesselType {OtherType, CargoShip, Tanker,
+                 ContainerShip, PassengerShip,
+                 FishingShip, MotorVessel,
+                 SailingVessel, MilitaryVessel}
+
+enum StaticObstacleType {Small, Medium, Large}
+
+abstract class SeaObject {
+    Vessel[0..*] inHeadOnSectorOf
+    SeaObject[0..*] mayCollideWith opposite mayCollideWith
+}
+
+class StaticObstacle extends SeaObject {
+    //StaticObstacleType[1] staticObstacleType
+}
+
+abstract class Vessel extends SeaObject {
+    //VesselType[1] vesselType
+}
+
+class OS extends Vessel.
+class TS extends Vessel.
+
+enum DistanceRelationType {AtVisibilityDistance, InVisibilityDistance, OutVisibilityDistance}
+class DistanceRelation{
+    SeaObject[2] seaObjects
+    DistanceRelationType[1] distanceType
+}
+pred inDistanceRelation(SeaObject o1, SeaObject o2, DistanceRelationType type) <->
+    DistanceRelation(r), seaObjects(r, o1), seaObjects(r, o2), distanceType(r, type).
+
+
+enum SectorRelationType {InSternSector, InPortSideSector, InStarboardSideSector}
+class SectorRelation{
+    SeaObject[1] sectorSource
+    Vessel[1] sectorTarget
+    SectorRelationType[1] sectorType
+}
+pred inSectorRelation(SeaObject o, Vessel v, SectorRelationType type) <->
+    SectorRelation(r), sectorSource(r, o), sectorTarget(r, v), sectorType(r, type).
+
+pred inMastheadSectorOf(SeaObject o, Vessel v) <->
+    inSectorRelation(o, v, InPortSideSector);
+    inSectorRelation(o, v, InStarboardSideSector).
+
+
+//-----------------------------------------------------------------------
+// HELPER PREDICATES
+
+pred atVisibilityDistanceAndMayCollide(SeaObject v1, SeaObject v2) <->
+    inDistanceRelation(v2, v1, AtVisibilityDistance), mayCollideWith(v1, v2).
+
+pred headOn(Vessel v1, Vessel v2) <->
+    inHeadOnSectorOf(v1, v2), inHeadOnSectorOf(v2, v1), atVisibilityDistanceAndMayCollide(v1, v2).
+
+pred crossingFromPort(Vessel v1, Vessel v2) <->
+    inSectorRelation(v1, v2, InPortSideSector), inSectorRelation(v2, v1, InStarboardSideSector), atVisibilityDistanceAndMayCollide(v1, v2), !headOn(v1, v2).
+
+pred overtaking(Vessel v1, Vessel v2) <->
+    inSectorRelation(v1, v2, InSternSector), inMastheadSectorOf(v2, v1), atVisibilityDistanceAndMayCollide(v1, v2).
+
+pred inDangerousSituationWith(Vessel v, StaticObstacle o) <->
+    atVisibilityDistanceAndMayCollide(v, o), inSectorRelation(o, v, _).
+
+pred inCOLREGSSituationWith(Vessel v1, Vessel v2) <->
+    headOn(v2, v1);
+    crossingFromPort(v1, v2);
+    crossingFromPort(v2, v1);
+    overtaking(v1, v2);
+    overtaking(v2, v1).
+
+pred inGiveWayRole(Vessel v1) <-> 
+    overtaking(v1, _);
+    crossingFromPort(v1, _);
+    headOn(_, v1).
+
+pred inStandOnRole(Vessel v1) <->
+    overtaking(_, v1);
+    crossingFromPort(_, v1).
+
+pred inAmbiguousSituation(Vessel v) <->
+    inGiveWayRole(v), inStandOnRole(v).
+
+//----------------------------------------------------------------------------
+// WELL-FORMED PREDICATES (CONSISTENT CASES) 
+
+// No self loops are allowed.
+error selfLoopRules(SeaObject o) <->
+    inHeadOnSectorOf(o, o);
+    mayCollideWith(o, o);
+    inSectorRelation(o, o, _).
+
+// If a sea object is in the:
+//   - stern sector of a vessel, it cannot be in the masthead sector,
+//   - port sector of a vessel, it cannot be in the starboard sector,
+//   - head on sector of a vessel, it must be in the masthead sector as well.
+// A sea object is either in the stern or masthead sector of a vessel.
+error sectorRules(SeaObject o, Vessel v) <->
+    inHeadOnSectorOf(o, v), !inMastheadSectorOf(o, v).
+
+// Two static obstacles cannot collide with each other.
+error staticObstacleCollisionRule(StaticObstacle o1, StaticObstacle o2) <->
+    mayCollideWith(o1, o2).
+
+
+//----------------------------------------------------------------------------
+// TESTING PREDICATES (RELEVANT CASES) 
+
+// There has to be an OS.
+//error noOS() <->
+//    !OS(_).
+
+// There is only one OS.
+//error moreThanOneOS(OS v1, OS v2) <->
+//    v1 != v2.
+
+// A TS must be in a COLREGS situation with the OS.
+error TSNotInCOLREGSSituationWithOS(TS ts, OS os) <->
+    !inCOLREGSSituationWith(ts, os).
+
+// A static obstacle must be at the visibility distance of the OS
+// and the OS may collide with it.
+error obstacleNotInSituationWithOS(StaticObstacle o, OS os) <->
+    !inDangerousSituationWith(os, o).
+
+// Two TSs either do not collide or are outside of each other's visibility range.
+// (Two TSs cannot be in a COLREGS situation.)
+error noTSRelations(TS ts1, TS ts2) <->
+    headOn(ts1, ts2);
+    mayCollideWith(ts1, ts2).
+
+error noTSObstacleRelations(StaticObstacle o, TS ts) <->
+    mayCollideWith(ts, o);
+    inHeadOnSectorOf(o, ts).
+//--------------------------------------------------------------------------------
+
+OS(os).
+//vesselType(os, PassengerShip).
+
+TS(ts1).
+StaticObstacle(obst1).
+
+//default !inAmbiguousSituation(*).
+//inAmbiguousSituation(os).
+
+
+scope OS=1,
+      TS=1,
+      StaticObstacle = 1,
+      DistanceRelation = 2,
+      SectorRelation = 3.

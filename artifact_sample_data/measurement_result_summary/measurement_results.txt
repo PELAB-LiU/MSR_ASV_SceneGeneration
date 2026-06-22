@@ -1,0 +1,658 @@
+Median, Mean, Min and Max of 30 measured percentages of covered unique relevant FECs for each approach and vessel size:
+
+Median for DC/SB2 (2 vessels): 100.000%
+Mean for DC/SB2 (2 vessels): 100.000%
+Min for DC/SB2 (2 vessels): 100.000%
+Max for DC/SB2 (2 vessels): 100.000%
+Median for DC/SB3 (2 vessels): 100.000%
+Mean for DC/SB3 (2 vessels): 100.000%
+Min for DC/SB3 (2 vessels): 100.000%
+Max for DC/SB3 (2 vessels): 100.000%
+Median for DC/RS (2 vessels): 100.000%
+Mean for DC/RS (2 vessels): 96.667%
+Min for DC/RS (2 vessels): 71.429%
+Max for DC/RS (2 vessels): 100.000%
+Median for MSR/SB2 (2 vessels): 100.000%
+Mean for MSR/SB2 (2 vessels): 100.000%
+Min for MSR/SB2 (2 vessels): 100.000%
+Max for MSR/SB2 (2 vessels): 100.000%
+Median for MSR/SB3 (2 vessels): 100.000%
+Mean for MSR/SB3 (2 vessels): 100.000%
+Min for MSR/SB3 (2 vessels): 100.000%
+Max for MSR/SB3 (2 vessels): 100.000%
+Median for MSR/RS (2 vessels): 100.000%
+Mean for MSR/RS (2 vessels): 100.000%
+Min for MSR/RS (2 vessels): 100.000%
+Max for MSR/RS (2 vessels): 100.000%
+Median for MSR/RS+PS (2 vessels): 100.000%
+Mean for MSR/RS+PS (2 vessels): 100.000%
+Min for MSR/RS+PS (2 vessels): 100.000%
+Max for MSR/RS+PS (2 vessels): 100.000%
+Median for DC/RS+PS (2 vessels): 100.000%
+Mean for DC/RS+PS (2 vessels): 100.000%
+Min for DC/RS+PS (2 vessels): 100.000%
+Max for DC/RS+PS (2 vessels): 100.000%
+Median for DC/SB2 (3 vessels): 100.000%
+Mean for DC/SB2 (3 vessels): 98.690%
+Min for DC/SB2 (3 vessels): 96.429%
+Max for DC/SB2 (3 vessels): 100.000%
+Median for DC/SB3 (3 vessels): 100.000%
+Mean for DC/SB3 (3 vessels): 98.690%
+Min for DC/SB3 (3 vessels): 96.429%
+Max for DC/SB3 (3 vessels): 100.000%
+Median for DC/RS (3 vessels): 57.143%
+Mean for DC/RS (3 vessels): 57.857%
+Min for DC/RS (3 vessels): 42.857%
+Max for DC/RS (3 vessels): 71.429%
+Median for MSR/SB2 (3 vessels): 100.000%
+Mean for MSR/SB2 (3 vessels): 100.000%
+Min for MSR/SB2 (3 vessels): 100.000%
+Max for MSR/SB2 (3 vessels): 100.000%
+Median for MSR/SB3 (3 vessels): 100.000%
+Mean for MSR/SB3 (3 vessels): 100.000%
+Min for MSR/SB3 (3 vessels): 100.000%
+Max for MSR/SB3 (3 vessels): 100.000%
+Median for MSR/RS (3 vessels): 100.000%
+Mean for MSR/RS (3 vessels): 100.000%
+Min for MSR/RS (3 vessels): 100.000%
+Max for MSR/RS (3 vessels): 100.000%
+Median for MSR/RS+PS (3 vessels): 100.000%
+Mean for MSR/RS+PS (3 vessels): 100.000%
+Min for MSR/RS+PS (3 vessels): 100.000%
+Max for MSR/RS+PS (3 vessels): 100.000%
+Median for DC/RS+PS (3 vessels): 75.000%
+Mean for DC/RS+PS (3 vessels): 75.238%
+Min for DC/RS+PS (3 vessels): 64.286%
+Max for DC/RS+PS (3 vessels): 85.714%
+Median for DC/SB2 (4 vessels): 91.667%
+Mean for DC/SB2 (4 vessels): 91.429%
+Min for DC/SB2 (4 vessels): 86.905%
+Max for DC/SB2 (4 vessels): 95.238%
+Median for DC/SB3 (4 vessels): 91.667%
+Mean for DC/SB3 (4 vessels): 91.667%
+Min for DC/SB3 (4 vessels): 88.095%
+Max for DC/SB3 (4 vessels): 97.619%
+Median for DC/RS (4 vessels): 17.857%
+Mean for DC/RS (4 vessels): 17.540%
+Min for DC/RS (4 vessels): 13.095%
+Max for DC/RS (4 vessels): 21.429%
+Median for MSR/SB2 (4 vessels): 100.000%
+Mean for MSR/SB2 (4 vessels): 99.921%
+Min for MSR/SB2 (4 vessels): 98.810%
+Max for MSR/SB2 (4 vessels): 100.000%
+Median for MSR/SB3 (4 vessels): 100.000%
+Mean for MSR/SB3 (4 vessels): 99.921%
+Min for MSR/SB3 (4 vessels): 98.810%
+Max for MSR/SB3 (4 vessels): 100.000%
+Median for MSR/RS (4 vessels): 68.452%
+Mean for MSR/RS (4 vessels): 65.119%
+Min for MSR/RS (4 vessels): 44.048%
+Max for MSR/RS (4 vessels): 85.714%
+Median for MSR/RS+PS (4 vessels): 100.000%
+Mean for MSR/RS+PS (4 vessels): 100.000%
+Min for MSR/RS+PS (4 vessels): 100.000%
+Max for MSR/RS+PS (4 vessels): 100.000%
+Median for DC/RS+PS (4 vessels): 34.524%
+Mean for DC/RS+PS (4 vessels): 34.841%
+Min for DC/RS+PS (4 vessels): 28.571%
+Max for DC/RS+PS (4 vessels): 40.476%
+Median for DC/SB2 (5 vessels): 70.952%
+Mean for DC/SB2 (5 vessels): 71.048%
+Min for DC/SB2 (5 vessels): 67.143%
+Max for DC/SB2 (5 vessels): 73.810%
+Median for DC/SB3 (5 vessels): 72.857%
+Mean for DC/SB3 (5 vessels): 72.968%
+Min for DC/SB3 (5 vessels): 68.571%
+Max for DC/SB3 (5 vessels): 78.571%
+Median for DC/RS (5 vessels): 1.429%
+Mean for DC/RS (5 vessels): 1.571%
+Min for DC/RS (5 vessels): 0.476%
+Max for DC/RS (5 vessels): 3.333%
+Median for MSR/SB2 (5 vessels): 89.048%
+Mean for MSR/SB2 (5 vessels): 88.222%
+Min for MSR/SB2 (5 vessels): 75.714%
+Max for MSR/SB2 (5 vessels): 98.571%
+Median for MSR/SB3 (5 vessels): 100.000%
+Mean for MSR/SB3 (5 vessels): 99.810%
+Min for MSR/SB3 (5 vessels): 99.048%
+Max for MSR/SB3 (5 vessels): 100.000%
+Median for MSR/RS (5 vessels): 7.619%
+Mean for MSR/RS (5 vessels): 7.746%
+Min for MSR/RS (5 vessels): 2.381%
+Max for MSR/RS (5 vessels): 11.429%
+Median for MSR/RS+PS (5 vessels): 100.000%
+Mean for MSR/RS+PS (5 vessels): 100.000%
+Min for MSR/RS+PS (5 vessels): 100.000%
+Max for MSR/RS+PS (5 vessels): 100.000%
+Median for DC/RS+PS (5 vessels): 10.000%
+Mean for DC/RS+PS (5 vessels): 9.921%
+Min for DC/RS+PS (5 vessels): 7.143%
+Max for DC/RS+PS (5 vessels): 12.381%
+Median for DC/SB2 (6 vessels): 44.481%
+Mean for DC/SB2 (6 vessels): 44.502%
+Min for DC/SB2 (6 vessels): 41.775%
+Max for DC/SB2 (6 vessels): 46.970%
+Median for DC/SB3 (6 vessels): 52.165%
+Mean for DC/SB3 (6 vessels): 52.042%
+Min for DC/SB3 (6 vessels): 48.268%
+Max for DC/SB3 (6 vessels): 54.329%
+Median for DC/RS (6 vessels): 0.000%
+Mean for DC/RS (6 vessels): 0.108%
+Min for DC/RS (6 vessels): 0.000%
+Max for DC/RS (6 vessels): 0.866%
+Median for MSR/SB2 (6 vessels): 37.338%
+Mean for MSR/SB2 (6 vessels): 36.818%
+Min for MSR/SB2 (6 vessels): 33.117%
+Max for MSR/SB2 (6 vessels): 39.610%
+Median for MSR/SB3 (6 vessels): 68.182%
+Mean for MSR/SB3 (6 vessels): 68.268%
+Min for MSR/SB3 (6 vessels): 60.390%
+Max for MSR/SB3 (6 vessels): 76.190%
+Median for MSR/RS (6 vessels): 0.649%
+Mean for MSR/RS (6 vessels): 0.707%
+Min for MSR/RS (6 vessels): 0.000%
+Max for MSR/RS (6 vessels): 1.299%
+Median for MSR/RS+PS (6 vessels): 99.134%
+Mean for MSR/RS+PS (6 vessels): 99.127%
+Min for MSR/RS+PS (6 vessels): 98.052%
+Max for MSR/RS+PS (6 vessels): 100.000%
+Median for DC/RS+PS (6 vessels): 1.515%
+Mean for DC/RS+PS (6 vessels): 1.609%
+Min for DC/RS+PS (6 vessels): 1.082%
+Max for DC/RS+PS (6 vessels): 2.381%
+
+
+Statistical Analysis:
+
+Effect Size	A12​ Value (A > B)	A12​ Value (B > A)
+----------------------------------------------------------
+Negligible	0.50 to 0.56		0.44 to 0.50
+Small		0.56 to 0.64		0.36 to 0.44
+Medium		0.64 to 0.71		0.29 to 0.36
+Large		> 0.71			< 0.29
+
+
+2 vessels, DC/SB2 - DC/SB3: p-value:1.0, effect-size:0.5
+2 vessels, DC/SB2 - DC/RS: p-value:0.01095298519868556, effect-size:0.6
+2 vessels, DC/SB2 - MSR/SB2: p-value:1.0, effect-size:0.5
+2 vessels, DC/SB2 - MSR/SB3: p-value:1.0, effect-size:0.5
+2 vessels, DC/SB2 - MSR/RS: p-value:1.0, effect-size:0.5
+2 vessels, DC/SB2 - MSR/RS+PS: p-value:1.0, effect-size:0.5
+2 vessels, DC/SB2 - DC/RS+PS: p-value:1.0, effect-size:0.5
+2 vessels, DC/SB3 - DC/RS: p-value:0.01095298519868556, effect-size:0.6
+2 vessels, DC/SB3 - MSR/SB2: p-value:1.0, effect-size:0.5
+2 vessels, DC/SB3 - MSR/SB3: p-value:1.0, effect-size:0.5
+2 vessels, DC/SB3 - MSR/RS: p-value:1.0, effect-size:0.5
+2 vessels, DC/SB3 - MSR/RS+PS: p-value:1.0, effect-size:0.5
+2 vessels, DC/SB3 - DC/RS+PS: p-value:1.0, effect-size:0.5
+2 vessels, DC/RS - MSR/SB2: p-value:0.01095298519868556, effect-size:0.4
+2 vessels, DC/RS - MSR/SB3: p-value:0.01095298519868556, effect-size:0.4
+2 vessels, DC/RS - MSR/RS: p-value:0.01095298519868556, effect-size:0.4
+2 vessels, DC/RS - MSR/RS+PS: p-value:0.01095298519868556, effect-size:0.4
+2 vessels, DC/RS - DC/RS+PS: p-value:0.01095298519868556, effect-size:0.4
+2 vessels, MSR/SB2 - MSR/SB3: p-value:1.0, effect-size:0.5
+2 vessels, MSR/SB2 - MSR/RS: p-value:1.0, effect-size:0.5
+2 vessels, MSR/SB2 - MSR/RS+PS: p-value:1.0, effect-size:0.5
+2 vessels, MSR/SB2 - DC/RS+PS: p-value:1.0, effect-size:0.5
+2 vessels, MSR/SB3 - MSR/RS: p-value:1.0, effect-size:0.5
+2 vessels, MSR/SB3 - MSR/RS+PS: p-value:1.0, effect-size:0.5
+2 vessels, MSR/SB3 - DC/RS+PS: p-value:1.0, effect-size:0.5
+2 vessels, MSR/RS - MSR/RS+PS: p-value:1.0, effect-size:0.5
+2 vessels, MSR/RS - DC/RS+PS: p-value:1.0, effect-size:0.5
+2 vessels, MSR/RS+PS - DC/RS+PS: p-value:1.0, effect-size:0.5
+3 vessels, DC/SB2 - DC/SB3: p-value:1.0, effect-size:0.5
+3 vessels, DC/SB2 - DC/RS: p-value:1.1386775563923024e-11, effect-size:1.0
+3 vessels, DC/SB2 - MSR/SB2: p-value:0.00028526522806494994, effect-size:0.31666666666666665
+3 vessels, DC/SB2 - MSR/SB3: p-value:0.00028526522806494994, effect-size:0.31666666666666665
+3 vessels, DC/SB2 - MSR/RS: p-value:0.00028526522806494994, effect-size:0.31666666666666665
+3 vessels, DC/SB2 - MSR/RS+PS: p-value:0.00028526522806494994, effect-size:0.31666666666666665
+3 vessels, DC/SB2 - DC/RS+PS: p-value:9.92081868566165e-12, effect-size:1.0
+3 vessels, DC/SB3 - DC/RS: p-value:1.1386775563923024e-11, effect-size:1.0
+3 vessels, DC/SB3 - MSR/SB2: p-value:0.00028526522806494994, effect-size:0.31666666666666665
+3 vessels, DC/SB3 - MSR/SB3: p-value:0.00028526522806494994, effect-size:0.31666666666666665
+3 vessels, DC/SB3 - MSR/RS: p-value:0.00028526522806494994, effect-size:0.31666666666666665
+3 vessels, DC/SB3 - MSR/RS+PS: p-value:0.00028526522806494994, effect-size:0.31666666666666665
+3 vessels, DC/SB3 - DC/RS+PS: p-value:9.92081868566165e-12, effect-size:1.0
+3 vessels, DC/RS - MSR/SB2: p-value:1.0874810166496387e-12, effect-size:0.0
+3 vessels, DC/RS - MSR/SB3: p-value:1.0874810166496387e-12, effect-size:0.0
+3 vessels, DC/RS - MSR/RS: p-value:1.0874810166496387e-12, effect-size:0.0
+3 vessels, DC/RS - MSR/RS+PS: p-value:1.0874810166496387e-12, effect-size:0.0
+3 vessels, DC/RS - DC/RS+PS: p-value:1.215202985852028e-10, effect-size:0.019444444444444445
+3 vessels, MSR/SB2 - MSR/SB3: p-value:1.0, effect-size:0.5
+3 vessels, MSR/SB2 - MSR/RS: p-value:1.0, effect-size:0.5
+3 vessels, MSR/SB2 - MSR/RS+PS: p-value:1.0, effect-size:0.5
+3 vessels, MSR/SB2 - DC/RS+PS: p-value:9.206450055319649e-13, effect-size:1.0
+3 vessels, MSR/SB3 - MSR/RS: p-value:1.0, effect-size:0.5
+3 vessels, MSR/SB3 - MSR/RS+PS: p-value:1.0, effect-size:0.5
+3 vessels, MSR/SB3 - DC/RS+PS: p-value:9.206450055319649e-13, effect-size:1.0
+3 vessels, MSR/RS - MSR/RS+PS: p-value:1.0, effect-size:0.5
+3 vessels, MSR/RS - DC/RS+PS: p-value:9.206450055319649e-13, effect-size:1.0
+3 vessels, MSR/RS+PS - DC/RS+PS: p-value:9.206450055319649e-13, effect-size:1.0
+4 vessels, DC/SB2 - DC/SB3: p-value:0.7457608836033107, effect-size:0.47555555555555556
+4 vessels, DC/SB2 - DC/RS: p-value:2.2578984515534943e-11, effect-size:1.0
+4 vessels, DC/SB2 - MSR/SB2: p-value:1.9399881789585005e-12, effect-size:0.0
+4 vessels, DC/SB2 - MSR/SB3: p-value:1.9399881789585005e-12, effect-size:0.0
+4 vessels, DC/SB2 - MSR/RS: p-value:2.536707123527292e-11, effect-size:1.0
+4 vessels, DC/SB2 - MSR/RS+PS: p-value:9.839896908186724e-13, effect-size:0.0
+4 vessels, DC/SB2 - DC/RS+PS: p-value:2.3783304576285257e-11, effect-size:1.0
+4 vessels, DC/SB3 - DC/RS: p-value:2.3737674251975792e-11, effect-size:1.0
+4 vessels, DC/SB3 - MSR/SB2: p-value:2.0625277966747845e-12, effect-size:0.0
+4 vessels, DC/SB3 - MSR/SB3: p-value:2.0625277966747845e-12, effect-size:0.0
+4 vessels, DC/SB3 - MSR/RS: p-value:2.6655424667135268e-11, effect-size:1.0
+4 vessels, DC/SB3 - MSR/RS+PS: p-value:1.049604227039287e-12, effect-size:0.0
+4 vessels, DC/SB3 - DC/RS+PS: p-value:2.4998175298546228e-11, effect-size:1.0
+4 vessels, DC/RS - MSR/SB2: p-value:2.0145771569918932e-12, effect-size:0.0
+4 vessels, DC/RS - MSR/SB3: p-value:2.0145771569918932e-12, effect-size:0.0
+4 vessels, DC/RS - MSR/RS: p-value:2.6152998768822468e-11, effect-size:0.0
+4 vessels, DC/RS - MSR/RS+PS: p-value:1.0239040536456663e-12, effect-size:0.0
+4 vessels, DC/RS - DC/RS+PS: p-value:2.4524367490563977e-11, effect-size:0.0
+4 vessels, MSR/SB2 - MSR/SB3: p-value:1.0, effect-size:0.5
+4 vessels, MSR/SB2 - MSR/RS: p-value:2.322049815233904e-12, effect-size:1.0
+4 vessels, MSR/SB2 - MSR/RS+PS: p-value:0.16074199750363027, effect-size:0.4666666666666667
+4 vessels, MSR/SB2 - DC/RS+PS: p-value:2.146463850294861e-12, effect-size:1.0
+4 vessels, MSR/SB3 - MSR/RS: p-value:2.322049815233904e-12, effect-size:1.0
+4 vessels, MSR/SB3 - MSR/RS+PS: p-value:0.16074199750363027, effect-size:0.4666666666666667
+4 vessels, MSR/SB3 - DC/RS+PS: p-value:2.146463850294861e-12, effect-size:1.0
+4 vessels, MSR/RS - MSR/RS+PS: p-value:1.189220116989688e-12, effect-size:0.0
+4 vessels, MSR/RS - DC/RS+PS: p-value:2.7529807281135532e-11, effect-size:1.0
+4 vessels, MSR/RS+PS - DC/RS+PS: p-value:1.0946655810191252e-12, effect-size:1.0
+5 vessels, DC/SB2 - DC/SB3: p-value:0.00015995209881942572, effect-size:0.21666666666666667
+5 vessels, DC/SB2 - DC/RS: p-value:2.463418327911243e-11, effect-size:1.0
+5 vessels, DC/SB2 - MSR/SB2: p-value:2.900893911357344e-11, effect-size:0.0
+5 vessels, DC/SB2 - MSR/SB3: p-value:1.1511595911560314e-11, effect-size:0.0
+5 vessels, DC/SB2 - MSR/RS: p-value:2.8448213306903477e-11, effect-size:1.0
+5 vessels, DC/SB2 - MSR/RS+PS: p-value:1.1527942696948406e-12, effect-size:0.0
+5 vessels, DC/SB2 - DC/RS+PS: p-value:2.7844609057369553e-11, effect-size:1.0
+5 vessels, DC/SB3 - DC/RS: p-value:2.4712897801575508e-11, effect-size:1.0
+5 vessels, DC/SB3 - MSR/SB2: p-value:4.337933369033678e-11, effect-size:0.0044444444444444444
+5 vessels, DC/SB3 - MSR/SB3: p-value:1.1550858464113106e-11, effect-size:0.0
+5 vessels, DC/SB3 - MSR/RS: p-value:2.853797871999687e-11, effect-size:1.0
+5 vessels, DC/SB3 - MSR/RS+PS: p-value:1.1575275793293145e-12, effect-size:0.0
+5 vessels, DC/SB3 - DC/RS+PS: p-value:2.7932635089866763e-11, effect-size:1.0
+5 vessels, DC/RS - MSR/SB2: p-value:2.5561505209015535e-11, effect-size:0.0
+5 vessels, DC/RS - MSR/SB3: p-value:1.0037755338198664e-11, effect-size:0.0
+5 vessels, DC/RS - MSR/RS: p-value:3.385499509558422e-11, effect-size:0.0033333333333333335
+5 vessels, DC/RS - MSR/RS+PS: p-value:9.774787292232406e-13, effect-size:0.0
+5 vessels, DC/RS - DC/RS+PS: p-value:2.4524367490563977e-11, effect-size:0.0
+5 vessels, MSR/SB2 - MSR/SB3: p-value:1.1974647032131143e-11, effect-size:0.0
+5 vessels, MSR/SB2 - MSR/RS: p-value:2.950550967787438e-11, effect-size:1.0
+5 vessels, MSR/SB2 - MSR/RS+PS: p-value:1.2088155170951906e-12, effect-size:0.0
+5 vessels, MSR/SB2 - DC/RS+PS: p-value:2.888144943583771e-11, effect-size:1.0
+5 vessels, MSR/SB3 - MSR/RS: p-value:1.1725074779481958e-11, effect-size:1.0
+5 vessels, MSR/SB3 - MSR/RS+PS: p-value:0.0006388300525588091, effect-size:0.3333333333333333
+5 vessels, MSR/SB3 - DC/RS+PS: p-value:1.1456833639674192e-11, effect-size:1.0
+5 vessels, MSR/RS - MSR/RS+PS: p-value:1.1785680319585353e-12, effect-size:0.0
+5 vessels, MSR/RS - DC/RS+PS: p-value:0.00010440753200034054, effect-size:0.2088888888888889
+5 vessels, MSR/RS+PS - DC/RS+PS: p-value:1.1461976472748565e-12, effect-size:1.0
+6 vessels, DC/SB2 - DC/SB3: p-value:2.935757522559952e-11, effect-size:0.0
+6 vessels, DC/SB2 - DC/RS: p-value:1.1837188996133379e-11, effect-size:1.0
+6 vessels, DC/SB2 - MSR/SB2: p-value:2.9616906488199523e-11, effect-size:1.0
+6 vessels, DC/SB2 - MSR/SB3: p-value:2.969138405322447e-11, effect-size:0.0
+6 vessels, DC/SB2 - MSR/RS: p-value:2.376808557633683e-11, effect-size:1.0
+6 vessels, DC/SB2 - MSR/RS+PS: p-value:2.805629819198409e-11, effect-size:0.0
+6 vessels, DC/SB2 - DC/RS+PS: p-value:2.6706148716864394e-11, effect-size:1.0
+6 vessels, DC/SB3 - DC/RS: p-value:1.1813082215152467e-11, effect-size:1.0
+6 vessels, DC/SB3 - MSR/SB2: p-value:2.9561160210067515e-11, effect-size:1.0
+6 vessels, DC/SB3 - MSR/SB3: p-value:2.963550988338225e-11, effect-size:0.0
+6 vessels, DC/SB3 - MSR/RS: p-value:2.3722481918204896e-11, effect-size:1.0
+6 vessels, DC/SB3 - MSR/RS+PS: p-value:2.8003238673915385e-11, effect-size:0.0
+6 vessels, DC/SB3 - DC/RS+PS: p-value:2.6655424667135268e-11, effect-size:1.0
+6 vessels, DC/RS - MSR/SB2: p-value:1.1925966425090752e-11, effect-size:0.0
+6 vessels, DC/RS - MSR/SB3: p-value:1.1958399984589844e-11, effect-size:0.0
+6 vessels, DC/RS - MSR/RS: p-value:2.7182579866669663e-09, effect-size:0.0661111111111111
+6 vessels, DC/RS - MSR/RS+PS: p-value:1.1247835013007064e-11, effect-size:0.0
+6 vessels, DC/RS - DC/RS+PS: p-value:1.0663518574230888e-11, effect-size:0.0
+6 vessels, MSR/SB2 - MSR/SB3: p-value:2.989707925956072e-11, effect-size:0.0
+6 vessels, MSR/SB2 - MSR/RS: p-value:2.3935984744181864e-11, effect-size:1.0
+6 vessels, MSR/SB2 - MSR/RS+PS: p-value:2.825163561771409e-11, effect-size:0.0
+6 vessels, MSR/SB2 - DC/RS+PS: p-value:2.6892891573096366e-11, effect-size:1.0
+6 vessels, MSR/SB3 - MSR/RS: p-value:2.3997307009028787e-11, effect-size:1.0
+6 vessels, MSR/SB3 - MSR/RS+PS: p-value:2.832297454065457e-11, effect-size:0.0
+6 vessels, MSR/SB3 - DC/RS+PS: p-value:2.6961093014390475e-11, effect-size:1.0
+6 vessels, MSR/RS - MSR/RS+PS: p-value:2.2651680558268174e-11, effect-size:0.0
+6 vessels, MSR/RS - DC/RS+PS: p-value:1.1106596409165662e-10, effect-size:0.01888888888888889
+6 vessels, MSR/RS+PS - DC/RS+PS: p-value:2.5464118809148357e-11, effect-size:1.0
+6 vessels, MSR/SB3 - MSR/RS: p-value:2.3997307009028787e-11, effect-size:1.0
+6 vessels, MSR/SB3 - MSR/RS+PS: p-value:2.832297454065457e-11, effect-size:0.0
+6 vessels, MSR/SB3 - DC/RS+PS: p-value:2.6961093014390475e-11, effect-size:1.0
+6 vessels, MSR/RS - MSR/RS+PS: p-value:2.2651680558268174e-11, effect-size:0.0
+6 vessels, MSR/RS - DC/RS+PS: p-value:1.1106596409165662e-10, effect-size:0.01888888888888889
+6 vessels, MSR/RS+PS - DC/RS+PS: p-value:2.5464118809148357e-11, effect-size:1.0
+6 vessels, MSR/SB3 - MSR/RS: p-value:2.3997307009028787e-11, effect-size:1.0
+6 vessels, MSR/SB3 - MSR/RS+PS: p-value:2.832297454065457e-11, effect-size:0.0
+6 vessels, MSR/SB3 - DC/RS+PS: p-value:2.6961093014390475e-11, effect-size:1.0
+6 vessels, MSR/RS - MSR/RS+PS: p-value:2.2651680558268174e-11, effect-size:0.0
+6 vessels, MSR/RS - DC/RS+PS: p-value:1.1106596409165662e-10, effect-size:0.01888888888888889
+6 vessels, MSR/RS+PS - DC/RS+PS: p-value:2.5464118809148357e-11, effect-size:1.0
+6 vessels, MSR/SB3 - MSR/RS: p-value:2.3997307009028787e-11, effect-size:1.0
+6 vessels, MSR/SB3 - MSR/RS+PS: p-value:2.832297454065457e-11, effect-size:0.0
+6 vessels, MSR/SB3 - DC/RS+PS: p-value:2.6961093014390475e-11, effect-size:1.0
+6 vessels, MSR/RS - MSR/RS+PS: p-value:2.2651680558268174e-11, effect-size:0.0
+6 vessels, MSR/SB3 - MSR/RS: p-value:2.3997307009028787e-11, effect-size:1.0
+6 vessels, MSR/SB3 - MSR/RS+PS: p-value:2.832297454065457e-11, effect-size:0.0
+6 vessels, MSR/SB3 - DC/RS+PS: p-value:2.6961093014390475e-11, effect-size:1.0
+6 vessels, MSR/SB3 - MSR/RS: p-value:2.3997307009028787e-11, effect-size:1.0
+6 vessels, MSR/SB3 - MSR/RS+PS: p-value:2.832297454065457e-11, effect-size:0.0
+6 vessels, MSR/SB3 - MSR/RS: p-value:2.3997307009028787e-11, effect-size:1.0
+6 vessels, MSR/SB3 - MSR/RS: p-value:2.3997307009028787e-11, effect-size:1.0
+6 vessels, MSR/SB3 - MSR/RS+PS: p-value:2.832297454065457e-11, effect-size:0.0
+6 vessels, MSR/SB3 - DC/RS+PS: p-value:2.6961093014390475e-11, effect-size:1.0
+6 vessels, MSR/RS - MSR/RS+PS: p-value:2.2651680558268174e-11, effect-size:0.0
+6 vessels, MSR/RS - DC/RS+PS: p-value:1.1106596409165662e-10, effect-size:0.01888888888888889
+6 vessels, MSR/RS+PS - DC/RS+PS: p-value:2.5464118809148357e-11, effect-size:1.0
+
+
+Median, Mean, Min and Max of 30 measured average times to generate a unique relevant FEC for each approach and vessel size:
+
+Median for DC/SB2 (2 vessels): 2.672s
+Mean for DC/SB2 (2 vessels): 3.644s
+Min for DC/SB2 (2 vessels): 0.341s
+Max for DC/SB2 (2 vessels): 12.180s
+Median for DC/SB3 (2 vessels): 2.444s
+Mean for DC/SB3 (2 vessels): 3.141s
+Min for DC/SB3 (2 vessels): 0.451s
+Max for DC/SB3 (2 vessels): 18.266s
+Median for DC/RS (2 vessels): 92.363s
+Mean for DC/RS (2 vessels): 134.197s
+Min for DC/RS (2 vessels): 19.276s
+Max for DC/RS (2 vessels): 336.000s
+Median for MSR/SB2 (2 vessels): 34.902s
+Mean for MSR/SB2 (2 vessels): 32.629s
+Min for MSR/SB2 (2 vessels): 0.244s
+Max for MSR/SB2 (2 vessels): 122.465s
+Median for MSR/SB3 (2 vessels): 0.429s
+Mean for MSR/SB3 (2 vessels): 3.410s
+Min for MSR/SB3 (2 vessels): 0.272s
+Max for MSR/SB3 (2 vessels): 34.944s
+Median for MSR/RS (2 vessels): 3.520s
+Mean for MSR/RS (2 vessels): 4.061s
+Min for MSR/RS (2 vessels): 1.339s
+Max for MSR/RS (2 vessels): 11.425s
+Median for MSR/RS+PS (2 vessels): 0.168s
+Mean for MSR/RS+PS (2 vessels): 0.176s
+Min for MSR/RS+PS (2 vessels): 0.000s
+Max for MSR/RS+PS (2 vessels): 0.508s
+Median for DC/RS+PS (2 vessels): 65.290s
+Mean for DC/RS+PS (2 vessels): 70.033s
+Min for DC/RS+PS (2 vessels): 12.137s
+Max for DC/RS+PS (2 vessels): 175.457s
+Median for DC/SB2 (3 vessels): 142.475s
+Mean for DC/SB2 (3 vessels): 148.613s
+Min for DC/SB2 (3 vessels): 24.019s
+Max for DC/SB2 (3 vessels): 248.889s
+Median for DC/SB3 (3 vessels): 198.746s
+Mean for DC/SB3 (3 vessels): 172.421s
+Min for DC/SB3 (3 vessels): 36.681s
+Max for DC/SB3 (3 vessels): 248.889s
+Median for DC/RS (3 vessels): 420.000s
+Mean for DC/RS (3 vessels): 422.114s
+Min for DC/RS (3 vessels): 336.000s
+Max for DC/RS (3 vessels): 560.000s
+Median for MSR/SB2 (3 vessels): 78.434s
+Mean for MSR/SB2 (3 vessels): 79.766s
+Min for MSR/SB2 (3 vessels): 24.451s
+Max for MSR/SB2 (3 vessels): 149.492s
+Median for MSR/SB3 (3 vessels): 21.581s
+Mean for MSR/SB3 (3 vessels): 22.029s
+Min for MSR/SB3 (3 vessels): 2.199s
+Max for MSR/SB3 (3 vessels): 55.562s
+Median for MSR/RS (3 vessels): 50.751s
+Mean for MSR/RS (3 vessels): 57.952s
+Min for MSR/RS (3 vessels): 30.128s
+Max for MSR/RS (3 vessels): 126.339s
+Median for MSR/RS+PS (3 vessels): 0.761s
+Mean for MSR/RS+PS (3 vessels): 0.808s
+Min for MSR/RS+PS (3 vessels): 0.352s
+Max for MSR/RS+PS (3 vessels): 1.463s
+Median for DC/RS+PS (3 vessels): 320.000s
+Mean for DC/RS+PS (3 vessels): 320.058s
+Min for DC/RS+PS (3 vessels): 280.000s
+Max for DC/RS+PS (3 vessels): 373.333s
+Median for DC/SB2 (4 vessels): 261.818s
+Mean for DC/SB2 (4 vessels): 262.605s
+Min for DC/SB2 (4 vessels): 252.000s
+Max for DC/SB2 (4 vessels): 276.164s
+Median for DC/SB3 (4 vessels): 261.818s
+Mean for DC/SB3 (4 vessels): 261.946s
+Min for DC/SB3 (4 vessels): 245.854s
+Max for DC/SB3 (4 vessels): 272.432s
+Median for DC/RS (4 vessels): 1344.000s
+Mean for DC/RS (4 vessels): 1390.788s
+Min for DC/RS (4 vessels): 1120.000s
+Max for DC/RS (4 vessels): 1832.727s
+Median for MSR/SB2 (4 vessels): 148.436s
+Mean for MSR/SB2 (4 vessels): 151.977s
+Min for MSR/SB2 (4 vessels): 107.828s
+Max for MSR/SB2 (4 vessels): 207.026s
+Median for MSR/SB3 (4 vessels): 49.835s
+Mean for MSR/SB3 (4 vessels): 51.055s
+Min for MSR/SB3 (4 vessels): 26.961s
+Max for MSR/SB3 (4 vessels): 86.438s
+Median for MSR/RS (4 vessels): 350.635s
+Mean for MSR/RS (4 vessels): 380.887s
+Min for MSR/RS (4 vessels): 280.000s
+Max for MSR/RS (4 vessels): 544.865s
+Median for MSR/RS+PS (4 vessels): 4.856s
+Mean for MSR/RS+PS (4 vessels): 4.931s
+Min for MSR/RS+PS (4 vessels): 3.141s
+Max for MSR/RS+PS (4 vessels): 7.332s
+Median for DC/RS+PS (4 vessels): 695.172s
+Mean for DC/RS+PS (4 vessels): 693.666s
+Min for DC/RS+PS (4 vessels): 592.941s
+Max for DC/RS+PS (4 vessels): 840.000s
+Median for DC/SB2 (5 vessels): 338.255s
+Mean for DC/SB2 (5 vessels): 337.949s
+Min for DC/SB2 (5 vessels): 325.161s
+Max for DC/SB2 (5 vessels): 357.447s
+Median for DC/SB3 (5 vessels): 329.412s
+Mean for DC/SB3 (5 vessels): 329.168s
+Min for DC/SB3 (5 vessels): 305.455s
+Max for DC/SB3 (5 vessels): 350.000s
+Median for DC/RS (5 vessels): 16800.000s
+Mean for DC/RS (5 vessels): 19392.000s
+Min for DC/RS (5 vessels): 7200.000s
+Max for DC/RS (5 vessels): 50400.000s
+Median for MSR/SB2 (5 vessels): 269.519s
+Mean for MSR/SB2 (5 vessels): 273.321s
+Min for MSR/SB2 (5 vessels): 243.478s
+Max for MSR/SB2 (5 vessels): 316.981s
+Median for MSR/SB3 (5 vessels): 187.864s
+Mean for MSR/SB3 (5 vessels): 189.167s
+Min for MSR/SB3 (5 vessels): 136.900s
+Max for MSR/SB3 (5 vessels): 241.520s
+Median for MSR/RS (5 vessels): 3150.000s
+Mean for MSR/RS (5 vessels): 3471.275s
+Min for MSR/RS (5 vessels): 2100.000s
+Max for MSR/RS (5 vessels): 10080.000s
+Median for MSR/RS+PS (5 vessels): 30.193s
+Mean for MSR/RS+PS (5 vessels): 31.659s
+Min for MSR/RS+PS (5 vessels): 17.493s
+Max for MSR/RS+PS (5 vessels): 46.866s
+Median for DC/RS+PS (5 vessels): 2400.000s
+Mean for DC/RS+PS (5 vessels): 2468.429s
+Min for DC/RS+PS (5 vessels): 1938.462s
+Max for DC/RS+PS (5 vessels): 3360.000s
+Median for DC/SB2 (6 vessels): 539.565s
+Mean for DC/SB2 (6 vessels): 539.761s
+Min for DC/SB2 (6 vessels): 510.968s
+Max for DC/SB2 (6 vessels): 574.508s
+Median for DC/SB3 (6 vessels): 460.083s
+Mean for DC/SB3 (6 vessels): 461.471s
+Min for DC/SB3 (6 vessels): 441.753s
+Max for DC/SB3 (6 vessels): 497.220s
+Median for DC/RS (6 vessels): 110880.000s
+Mean for DC/RS (6 vessels): 95172.000s
+Min for DC/RS (6 vessels): 27720.000s
+Max for DC/RS (6 vessels): 110880.000s
+Median for MSR/SB2 (6 vessels): 642.788s
+Mean for MSR/SB2 (6 vessels): 653.836s
+Min for MSR/SB2 (6 vessels): 605.902s
+Max for MSR/SB2 (6 vessels): 724.706s
+Median for MSR/SB3 (6 vessels): 351.606s
+Mean for MSR/SB3 (6 vessels): 352.178s
+Min for MSR/SB3 (6 vessels): 314.398s
+Max for MSR/SB3 (6 vessels): 397.318s
+Median for MSR/RS (6 vessels): 36960.000s
+Mean for MSR/RS (6 vessels): 39062.897s
+Min for MSR/RS (6 vessels): 18480.000s
+Max for MSR/RS (6 vessels): 110880.000s
+Median for MSR/RS+PS (6 vessels): 241.774s
+Mean for MSR/RS+PS (6 vessels): 239.803s
+Min for MSR/RS+PS (6 vessels): 202.081s
+Max for MSR/RS+PS (6 vessels): 244.781s
+Median for DC/RS+PS (6 vessels): 15840.000s
+Mean for DC/RS+PS (6 vessels): 15755.067s
+Min for DC/RS+PS (6 vessels): 10080.000s
+Max for DC/RS+PS (6 vessels): 22176.000s
+
+
+Statistical Analysis:
+
+Effect Size	A12​ Value (A > B)	A12​ Value (B > A)
+----------------------------------------------------------
+Negligible	0.50 to 0.56		0.44 to 0.50
+Small		0.56 to 0.64		0.36 to 0.44
+Medium		0.64 to 0.71		0.29 to 0.36
+Large		> 0.71			< 0.29
+
+
+2 vessels, DC/SB2 - DC/SB3: p-value:0.2339889162810581, effect-size:0.59
+2 vessels, DC/SB2 - DC/RS: p-value:3.000982378980083e-11, effect-size:0.0
+2 vessels, DC/SB2 - MSR/SB2: p-value:0.02324344705367121, effect-size:0.3288888888888889
+2 vessels, DC/SB2 - MSR/SB3: p-value:3.83494235931967e-06, effect-size:0.8477777777777777
+2 vessels, DC/SB2 - MSR/RS: p-value:0.1761275454839878, effect-size:0.3977777777777778
+2 vessels, DC/SB2 - MSR/RS+PS: p-value:4.972116029572513e-11, effect-size:0.9944444444444445
+2 vessels, DC/SB2 - DC/RS+PS: p-value:3.3383888204287995e-11, effect-size:0.0011111111111111111
+2 vessels, DC/SB3 - DC/RS: p-value:3.000982378980083e-11, effect-size:0.0
+2 vessels, DC/SB3 - MSR/SB2: p-value:0.022360148062659704, effect-size:0.3277777777777778
+2 vessels, DC/SB3 - MSR/SB3: p-value:3.3241530490778984e-06, effect-size:0.85
+2 vessels, DC/SB3 - MSR/RS: p-value:0.014412183349875863, effect-size:0.31555555555555553
+2 vessels, DC/SB3 - MSR/RS+PS: p-value:3.6874335905067576e-11, effect-size:0.9977777777777778
+2 vessels, DC/SB3 - DC/RS+PS: p-value:3.3383888204287995e-11, effect-size:0.0011111111111111111
+2 vessels, DC/RS - MSR/SB2: p-value:2.3677095883561262e-07, effect-size:0.8888888888888888
+2 vessels, DC/RS - MSR/SB3: p-value:3.666861555502866e-11, effect-size:0.9977777777777778
+2 vessels, DC/RS - MSR/RS: p-value:3.000982378980083e-11, effect-size:1.0
+2 vessels, DC/RS - MSR/RS+PS: p-value:2.999100614022856e-11, effect-size:1.0
+2 vessels, DC/RS - DC/RS+PS: p-value:0.00795030251190583, effect-size:0.7
+2 vessels, MSR/SB2 - MSR/SB3: p-value:0.0002838866568788881, effect-size:0.7733333333333333
+2 vessels, MSR/SB2 - MSR/RS: p-value:0.05554569313434556, effect-size:0.6444444444444445
+2 vessels, MSR/SB2 - MSR/RS+PS: p-value:4.197345029530687e-10, effect-size:0.97
+2 vessels, MSR/SB2 - DC/RS+PS: p-value:0.00035638379914234935, effect-size:0.2311111111111111
+2 vessels, MSR/SB3 - MSR/RS: p-value:1.3594320855421337e-07, effect-size:0.10333333333333333
+2 vessels, MSR/SB3 - MSR/RS+PS: p-value:5.964422257650942e-09, effect-size:0.9377777777777778
+2 vessels, MSR/SB3 - DC/RS+PS: p-value:1.328851208138703e-10, effect-size:0.016666666666666666
+2 vessels, MSR/RS - MSR/RS+PS: p-value:3.017966798490446e-11, effect-size:1.0
+2 vessels, MSR/RS - DC/RS+PS: p-value:3.019859359162157e-11, effect-size:0.0
+2 vessels, MSR/RS+PS - DC/RS+PS: p-value:3.017966798490446e-11, effect-size:0.0
+3 vessels, DC/SB2 - DC/SB3: p-value:0.3318572762423716, effect-size:0.42833333333333334
+3 vessels, DC/SB2 - DC/RS: p-value:2.4166683665055555e-11, effect-size:0.0
+3 vessels, DC/SB2 - MSR/SB2: p-value:0.013542869296816602, effect-size:0.6855555555555556
+3 vessels, DC/SB2 - MSR/SB3: p-value:7.192694618593996e-10, effect-size:0.9622222222222222
+3 vessels, DC/SB2 - MSR/RS: p-value:0.0003417556832843326, effect-size:0.7688888888888888
+3 vessels, DC/SB2 - MSR/RS+PS: p-value:2.6286126789143313e-11, effect-size:1.0
+3 vessels, DC/SB2 - DC/RS+PS: p-value:2.1863654610551153e-11, effect-size:0.0
+3 vessels, DC/SB3 - DC/RS: p-value:2.4166683665055555e-11, effect-size:0.0
+3 vessels, DC/SB3 - MSR/SB2: p-value:8.336254720335852e-06, effect-size:0.8344444444444444
+3 vessels, DC/SB3 - MSR/SB3: p-value:4.3436367391496885e-11, effect-size:0.9944444444444445
+3 vessels, DC/SB3 - MSR/RS: p-value:1.2911175780153613e-08, effect-size:0.9266666666666666
+3 vessels, DC/SB3 - MSR/RS+PS: p-value:2.6286126789143313e-11, effect-size:1.0
+3 vessels, DC/SB3 - DC/RS+PS: p-value:2.1863654610551153e-11, effect-size:0.0
+3 vessels, DC/RS - MSR/SB2: p-value:2.77919150242411e-11, effect-size:1.0
+3 vessels, DC/RS - MSR/SB3: p-value:2.77919150242411e-11, effect-size:1.0
+3 vessels, DC/RS - MSR/RS: p-value:2.77919150242411e-11, effect-size:1.0
+3 vessels, DC/RS - MSR/RS+PS: p-value:2.77919150242411e-11, effect-size:1.0
+3 vessels, DC/RS - DC/RS+PS: p-value:1.2483268230458089e-10, effect-size:0.9805555555555555
+3 vessels, MSR/SB2 - MSR/SB3: p-value:3.8201597819993253e-10, effect-size:0.9711111111111111
+3 vessels, MSR/SB2 - MSR/RS: p-value:0.005322077805144203, effect-size:0.71
+3 vessels, MSR/SB2 - MSR/RS+PS: p-value:3.019859359162157e-11, effect-size:1.0
+3 vessels, MSR/SB2 - DC/RS+PS: p-value:2.5173988322497203e-11, effect-size:0.0
+3 vessels, MSR/SB3 - MSR/RS: p-value:1.4109773081080244e-09, effect-size:0.044444444444444446
+3 vessels, MSR/SB3 - MSR/RS+PS: p-value:3.019859359162157e-11, effect-size:1.0
+3 vessels, MSR/SB3 - DC/RS+PS: p-value:2.5173988322497203e-11, effect-size:0.0
+3 vessels, MSR/RS - MSR/RS+PS: p-value:3.019859359162157e-11, effect-size:1.0
+3 vessels, MSR/RS - DC/RS+PS: p-value:2.5173988322497203e-11, effect-size:0.0
+3 vessels, MSR/RS+PS - DC/RS+PS: p-value:2.5173988322497203e-11, effect-size:0.0
+4 vessels, DC/SB2 - DC/SB3: p-value:0.7177552498835164, effect-size:0.5272222222222223
+4 vessels, DC/SB2 - DC/RS: p-value:2.310718796407181e-11, effect-size:0.0
+4 vessels, DC/SB2 - MSR/SB2: p-value:2.6336209060604078e-11, effect-size:1.0
+4 vessels, DC/SB2 - MSR/SB3: p-value:2.6336209060604078e-11, effect-size:1.0
+4 vessels, DC/SB2 - MSR/RS: p-value:2.5954460401228413e-11, effect-size:0.0
+4 vessels, DC/SB2 - MSR/RS+PS: p-value:2.6336209060604078e-11, effect-size:1.0
+4 vessels, DC/SB2 - DC/RS+PS: p-value:2.4337151241539282e-11, effect-size:0.0
+4 vessels, DC/SB3 - DC/RS: p-value:2.3737674251975792e-11, effect-size:0.0
+4 vessels, DC/SB3 - MSR/SB2: p-value:2.7046566795229522e-11, effect-size:1.0
+4 vessels, DC/SB3 - MSR/SB3: p-value:2.7046566795229522e-11, effect-size:1.0
+4 vessels, DC/SB3 - MSR/RS: p-value:2.6655424667135268e-11, effect-size:0.0
+4 vessels, DC/SB3 - MSR/RS+PS: p-value:2.7046566795229522e-11, effect-size:1.0
+4 vessels, DC/SB3 - DC/RS+PS: p-value:2.4998175298546228e-11, effect-size:0.0
+4 vessels, DC/RS - MSR/SB2: p-value:2.6537410336963057e-11, effect-size:1.0
+4 vessels, DC/RS - MSR/SB3: p-value:2.6537410336963057e-11, effect-size:1.0
+4 vessels, DC/RS - MSR/RS: p-value:2.6152998768822468e-11, effect-size:1.0
+4 vessels, DC/RS - MSR/RS+PS: p-value:2.6537410336963057e-11, effect-size:1.0
+4 vessels, DC/RS - DC/RS+PS: p-value:2.4524367490563977e-11, effect-size:1.0
+4 vessels, MSR/SB2 - MSR/SB3: p-value:3.019859359162157e-11, effect-size:1.0
+4 vessels, MSR/SB2 - MSR/RS: p-value:2.976603244829892e-11, effect-size:0.0
+4 vessels, MSR/SB2 - MSR/RS+PS: p-value:3.019859359162157e-11, effect-size:1.0
+4 vessels, MSR/SB2 - DC/RS+PS: p-value:2.7932635089866763e-11, effect-size:0.0
+4 vessels, MSR/SB3 - MSR/RS: p-value:2.976603244829892e-11, effect-size:0.0
+4 vessels, MSR/SB3 - MSR/RS+PS: p-value:3.019859359162157e-11, effect-size:1.0
+4 vessels, MSR/SB3 - DC/RS+PS: p-value:2.7932635089866763e-11, effect-size:0.0
+4 vessels, MSR/RS - MSR/RS+PS: p-value:2.976603244829892e-11, effect-size:1.0
+4 vessels, MSR/RS - DC/RS+PS: p-value:2.7529807281135532e-11, effect-size:0.0
+4 vessels, MSR/RS+PS - DC/RS+PS: p-value:2.7932635089866763e-11, effect-size:0.0
+5 vessels, DC/SB2 - DC/SB3: p-value:0.00015995209881942572, effect-size:0.7833333333333333
+5 vessels, DC/SB2 - DC/RS: p-value:2.463418327911243e-11, effect-size:0.0
+5 vessels, DC/SB2 - MSR/SB2: p-value:2.900893911357344e-11, effect-size:1.0
+5 vessels, DC/SB2 - MSR/SB3: p-value:2.9063734564966033e-11, effect-size:1.0
+5 vessels, DC/SB2 - MSR/RS: p-value:2.8448213306903477e-11, effect-size:0.0
+5 vessels, DC/SB2 - MSR/RS+PS: p-value:2.9063734564966033e-11, effect-size:1.0
+5 vessels, DC/SB2 - DC/RS+PS: p-value:2.7844609057369553e-11, effect-size:0.0
+5 vessels, DC/SB3 - DC/RS: p-value:2.4712897801575508e-11, effect-size:0.0
+5 vessels, DC/SB3 - MSR/SB2: p-value:4.337933369033678e-11, effect-size:0.9955555555555555
+5 vessels, DC/SB3 - MSR/SB3: p-value:2.915527021579793e-11, effect-size:1.0
+5 vessels, DC/SB3 - MSR/RS: p-value:2.853797871999687e-11, effect-size:0.0
+5 vessels, DC/SB3 - MSR/RS+PS: p-value:2.915527021579793e-11, effect-size:1.0
+5 vessels, DC/SB3 - DC/RS+PS: p-value:2.7932635089866763e-11, effect-size:0.0
+5 vessels, DC/RS - MSR/SB2: p-value:2.5561505209015535e-11, effect-size:1.0
+5 vessels, DC/RS - MSR/SB3: p-value:2.5610325801214453e-11, effect-size:1.0
+5 vessels, DC/RS - MSR/RS: p-value:3.385499509558422e-11, effect-size:0.9966666666666667
+5 vessels, DC/RS - MSR/RS+PS: p-value:2.5610325801214453e-11, effect-size:1.0
+5 vessels, DC/RS - DC/RS+PS: p-value:2.4524367490563977e-11, effect-size:1.0
+5 vessels, MSR/SB2 - MSR/SB3: p-value:3.0141849228072565e-11, effect-size:1.0
+5 vessels, MSR/SB2 - MSR/RS: p-value:2.950550967787438e-11, effect-size:0.0
+5 vessels, MSR/SB2 - MSR/RS+PS: p-value:3.0141849228072565e-11, effect-size:1.0
+5 vessels, MSR/SB2 - DC/RS+PS: p-value:2.888144943583771e-11, effect-size:0.0
+5 vessels, MSR/SB3 - MSR/RS: p-value:2.9561160210067515e-11, effect-size:0.0
+5 vessels, MSR/SB3 - MSR/RS+PS: p-value:3.019859359162157e-11, effect-size:1.0
+5 vessels, MSR/SB3 - DC/RS+PS: p-value:2.8936025137569305e-11, effect-size:0.0
+5 vessels, MSR/RS - MSR/RS+PS: p-value:2.9561160210067515e-11, effect-size:1.0
+5 vessels, MSR/RS - DC/RS+PS: p-value:0.00010440753200034054, effect-size:0.7911111111111111
+5 vessels, MSR/RS+PS - DC/RS+PS: p-value:2.8936025137569305e-11, effect-size:0.0
+6 vessels, DC/SB2 - DC/SB3: p-value:2.935757522559952e-11, effect-size:1.0
+6 vessels, DC/SB2 - DC/RS: p-value:2.695379470738967e-06, effect-size:0.0
+6 vessels, DC/SB2 - MSR/SB2: p-value:2.9616906488199523e-11, effect-size:0.0
+6 vessels, DC/SB2 - MSR/SB3: p-value:2.98034208171797e-11, effect-size:1.0
+6 vessels, DC/SB2 - MSR/RS: p-value:3.4828020466181705e-11, effect-size:0.0
+6 vessels, DC/SB2 - MSR/RS+PS: p-value:2.98034208171797e-11, effect-size:1.0
+6 vessels, DC/SB2 - DC/RS+PS: p-value:2.6706148716864394e-11, effect-size:0.0
+6 vessels, DC/SB3 - DC/RS: p-value:2.6866015780638293e-06, effect-size:0.0
+6 vessels, DC/SB3 - MSR/SB2: p-value:2.9561160210067515e-11, effect-size:0.0
+6 vessels, DC/SB3 - MSR/SB3: p-value:2.974735431495655e-11, effect-size:1.0
+6 vessels, DC/SB3 - MSR/RS: p-value:3.475885773937941e-11, effect-size:0.0
+6 vessels, DC/SB3 - MSR/RS+PS: p-value:2.974735431495655e-11, effect-size:1.0
+6 vessels, DC/SB3 - DC/RS+PS: p-value:2.6655424667135268e-11, effect-size:0.0
+6 vessels, DC/RS - MSR/SB2: p-value:2.727768745173502e-06, effect-size:1.0
+6 vessels, DC/RS - MSR/SB3: p-value:2.757492819279227e-06, effect-size:1.0
+6 vessels, DC/RS - MSR/RS: p-value:0.0004835626974620904, effect-size:0.8637931034482759
+6 vessels, DC/RS - MSR/RS+PS: p-value:2.757492819279227e-06, effect-size:1.0
+6 vessels, DC/RS - DC/RS+PS: p-value:2.2769240428224e-06, effect-size:1.0
+6 vessels, MSR/SB2 - MSR/SB3: p-value:3.000982378980083e-11, effect-size:1.0
+6 vessels, MSR/SB2 - MSR/RS: p-value:3.5082691962053626e-11, effect-size:0.0
+6 vessels, MSR/SB2 - MSR/RS+PS: p-value:3.000982378980083e-11, effect-size:1.0
+6 vessels, MSR/SB2 - DC/RS+PS: p-value:2.6892891573096366e-11, effect-size:0.0
+6 vessels, MSR/SB3 - MSR/RS: p-value:3.5315683559563725e-11, effect-size:0.0
+6 vessels, MSR/SB3 - MSR/RS+PS: p-value:3.019859359162157e-11, effect-size:1.0
+6 vessels, MSR/SB3 - DC/RS+PS: p-value:2.706369119995905e-11, effect-size:0.0
+6 vessels, MSR/RS - MSR/RS+PS: p-value:3.5315683559563725e-11, effect-size:1.0
+6 vessels, MSR/RS - DC/RS+PS: p-value:1.6664625236141108e-10, effect-size:0.9804597701149426
+6 vessels, MSR/RS+PS - DC/RS+PS: p-value:2.706369119995905e-11, effect-size:0.0

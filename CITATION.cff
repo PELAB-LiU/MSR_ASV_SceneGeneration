@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+title: >-
+  Automated Generation of Functionally Complete Assurance Suites for
+  COLREGS-Compliance of Autonomous Surface Vehicles
+message: >-
+  If you use this software, please cite it using the metadata below.
+type: software
+license: MIT
+repository-code: https://github.com/PELAB-LiU/MSR_ASV_SceneGeneration
+url: https://github.com/PELAB-LiU/MSR_ASV_SceneGeneration
+version: 1.0.0
+date-released: 2026-06-22
+keywords:
+  - autonomous surface vehicles
+  - COLREGS
+  - scenario generation
+  - assurance
+  - MSR
+  - search-based testing
+  - rejection sampling
+authors:
+  - family-names: Frey
+    given-names: Dominik
+    orcid: https://orcid.org/0009-0007-7174-4209
+  - family-names: Kargén
+    given-names: Ulf
+    orcid: https://orcid.org/0000-0002-3009-4314
+  - family-names: Varró
+    given-names: Dániel
+    orcid: https://orcid.org/0000-0002-8790-252X
