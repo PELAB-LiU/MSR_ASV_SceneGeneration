@@ -4,6 +4,17 @@ Research software and **MODELS26 artifact evaluation package** for generating an
 
 This repository is supplementary material for the paper **Automated Generation of Functionally Complete Assurance Suites for COLREGS-Compliance of Autonomous Surface Vehicles**.
 
+## Zenodo archives
+
+Published MODELS26 artifacts on Zenodo (for reviewers and offline use):
+
+| Artifact | Zenodo record | License |
+|----------|---------------|---------|
+| Software code | [10.5281/zenodo.19246757](https://doi.org/10.5281/zenodo.19246757) | MIT |
+| Measurement data | [10.5281/zenodo.20792734](https://doi.org/10.5281/zenodo.20792734) | CC-BY 4.0 |
+
+Download `MSR_ASV_SceneGeneration-main.zip` from the software record, or clone from GitHub (see [Installation](#installation)). Load measurement files from the data record via **Data Manager -> Download from Zenodo**, or upload a downloaded `.pkl.gz` manually.
+
 ![Image is available at assets/images/msr_only_overview.png](./assets/images/msr_only_overview.png)
 
 ---
@@ -11,6 +22,7 @@ This repository is supplementary material for the paper **Automated Generation o
 ## Table of contents
 
 - [Automated Generation of Functionally Complete Assurance Suites for COLREGS-Compliance of Autonomous Surface Vehicles](#automated-generation-of-functionally-complete-assurance-suites-for-colregs-compliance-of-autonomous-surface-vehicles)
+  - [Zenodo archives](#zenodo-archives)
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
   - [Quick start (Docker)](#quick-start-docker)
@@ -63,8 +75,6 @@ This repository is supplementary material for the paper **Automated Generation o
 All artifact evaluation workflows are exposed through a **browser-based Streamlit demonstrator** (`src/artifact_ui/`). You do not need to run individual Python scripts from the terminal to reproduce the paper experiments: scene generation, hyperparameter tuning, trajectory synthesis, data preparation, plotting, and scenario browsing are available as named pages in the web application.
 
 Long-running operations (scene generation, hyperparameter tuning, trajectory generation, Zenodo download, data compression) run in **isolated background worker processes**. The UI remains responsive, shows live logs, supports cancellation, and offers **download buttons** for completed or partially completed results directly in the browser.
-
-The full measurement dataset used in the paper and a summary of paper results are published separately on Zenodo (CC-BY 4.0).
 
 ---
 
@@ -152,7 +162,7 @@ Docker provides a reproducible environment matching the MODELS26 artifact evalua
 
 #### Zenodo dataset
 
-The full evaluation dataset is published on Zenodo at **`10.5281/zenodo.20792734`**. This DOI is hardcoded in `src/utils/artifact_config.py` and used by **Data Manager -> Download from Zenodo**.
+The default measurement-data DOI from [Zenodo archives](#zenodo-archives) is hardcoded in `src/utils/artifact_config.py` and used by **Data Manager → Download from Zenodo**.
 
 #### Docker troubleshooting
 
@@ -486,15 +496,10 @@ After generation, follow the [recommended data workflow](#recommended-data-workf
 
 ## Datasets and Zenodo
 
-| Asset | Location | License |
-|-------|----------|---------|
-| Software (this repository) | Git / Zenodo software record | MIT |
-| Full evaluation dataset | Zenodo `10.5281/zenodo.20792734` (hardcoded in artifact config) | CC-BY 4.0 |
-
-The artifact UI does **not** bundle the full dataset inside the Docker image. Acquire it by:
+Licenses and DOIs are listed under [Zenodo archives](#zenodo-archives). The artifact UI does **not** bundle the full dataset inside the Docker image. Acquire it by:
 
 - **Data Manager -> Download from Zenodo**, or
-- Uploading previously downloaded `.pkl.gz` / JSON measurements from the paper authors' archive.
+- Uploading a `.pkl.gz` or JSON measurements downloaded from the measurement-data record.
 
 ---
 
@@ -587,8 +592,6 @@ Target badges (see `STATUS.md`):
 
 ## Citation
 
-When using this artifact, cite the paper and the Zenodo records:
+When using this artifact, cite the paper and the Zenodo records listed under [Zenodo archives](#zenodo-archives):
 
 - **Paper**: *Automated Generation of Functionally Complete Assurance Suites for COLREGS-Compliance of Autonomous Surface Vehicles*
-- **Software DOI**: Zenodo software archive (assigned at publication)
-- **Dataset DOI**: `10.5281/zenodo.20792734`
