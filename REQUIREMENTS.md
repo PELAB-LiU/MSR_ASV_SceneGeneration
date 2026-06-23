@@ -3,7 +3,7 @@ Hardware
 - CPU: 4+ cores recommended for scene generation; paper measurements used Intel Haswell-class CPU
 - RAM: 8 GB minimum; 32 GB recommended for full reproduction runs
 - Disk: 10 GB free space (Docker image, bundled sample, optional full dataset download)
-- Display: not required (headless Docker + web browser)
+- Display: headless Docker + web browser
 
 Software
 ========

@@ -12,6 +12,7 @@ from artifact_ui.components.browser_upload import render_job_output_downloads
 from artifact_ui.components.job_runner import (get_active_job_state,
                                                job_is_running)
 from artifact_ui.components.job_state import JobState, cancel_job, tail_log
+from artifact_ui.components.log_view import render_scrollable_log
 
 
 def init_session_state() -> None:
@@ -39,12 +40,7 @@ def render_global_status_bar() -> Optional[JobState]:
     return None
 
 
-def render_job_panel(state: Optional[JobState]) -> None:
-    if state is None:
-        return
-    refreshed = get_active_job_state(state.job_id)
-    if refreshed is None:
-        return
+def _render_job_panel_body(refreshed: JobState) -> None:
     with st.status(f"Job {refreshed.script_name}: {refreshed.status}", expanded=True):
         st.write(f"Job ID: `{refreshed.job_id}`")
         if refreshed.status in {"queued", "running"}:
@@ -52,7 +48,11 @@ def render_job_panel(state: Optional[JobState]) -> None:
                 "Worker is starting or running. Heavy jobs load Python modules in the "
                 "background first: the log below updates automatically."
             )
-        st.code(tail_log(Path(refreshed.log_path)), language="text")
+        render_scrollable_log(
+            tail_log(Path(refreshed.log_path), max_lines=500),
+            label="Job log",
+            key=f"job_log_{refreshed.job_id}",
+        )
     if refreshed.status in {"completed", "failed", "cancelled"}:
         if refreshed.status == "completed":
             st.success("Job completed successfully.")
@@ -61,12 +61,28 @@ def render_job_panel(state: Optional[JobState]) -> None:
         else:
             st.warning("Job cancelled.")
         render_job_output_downloads(Path(refreshed.job_dir))
+
+
+@st.fragment(run_every=3)
+def _poll_active_job_panel(job_id: str) -> None:
+    refreshed = get_active_job_state(job_id)
+    if refreshed is None:
+        return
+    _render_job_panel_body(refreshed)
+    if not job_is_running(refreshed):
+        st.rerun()
+
+
+def render_job_panel(state: Optional[JobState]) -> None:
+    if state is None:
+        return
+    refreshed = get_active_job_state(state.job_id)
+    if refreshed is None:
         return
     if job_is_running(refreshed):
-        import time
-
-        time.sleep(3)
-        st.rerun()
+        _poll_active_job_panel(refreshed.job_id)
+        return
+    _render_job_panel_body(refreshed)
 
 
 def disable_if_job_running() -> bool:

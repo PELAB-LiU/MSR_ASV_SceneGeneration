@@ -36,6 +36,20 @@ def _safe_filename(name: str) -> str:
     return Path(name).name
 
 
+def _upload_fingerprint(uploaded: UploadedFile) -> str:
+    return f"{_safe_filename(uploaded.name)}:{uploaded.size}"
+
+
+def _uploads_fingerprint(uploads: List[UploadedFile]) -> str:
+    return "|".join(
+        sorted(_upload_fingerprint(uploaded) for uploaded in uploads)
+    )
+
+
+def _fingerprint_session_key(uploader_key: str) -> str:
+    return f"{uploader_key}_upload_fingerprint"
+
+
 def _extract_zip_safe(data: bytes, dest: Path) -> None:
     dest.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(io.BytesIO(data)) as archive:
@@ -104,14 +118,21 @@ def upload_file_picker(
         key=uploader_key,
         help=help_text or f"Choose a file on your computer. {UPLOAD_SIZE_HELP}",
     )
+    fingerprint_key = _fingerprint_session_key(uploader_key)
     if uploaded is not None:
-        path = persist_uploaded_file(uploaded, uploader_key)
-        if session_path_key == "loaded_pkl_path":
-            from artifact_ui.components.eval_data_loader import \
-                invalidate_eval_data_cache
+        fingerprint = _upload_fingerprint(uploaded)
+        if st.session_state.get(fingerprint_key) != fingerprint:
+            path = persist_uploaded_file(uploaded, uploader_key)
+            if session_path_key == "loaded_pkl_path":
+                from artifact_ui.components.eval_data_loader import \
+                    invalidate_eval_data_cache
 
-            invalidate_eval_data_cache()
-        st.session_state[session_path_key] = str(path)
+                invalidate_eval_data_cache()
+            st.session_state[session_path_key] = str(path)
+            st.session_state[fingerprint_key] = fingerprint
+    else:
+        st.session_state.pop(session_path_key, None)
+        st.session_state.pop(fingerprint_key, None)
     path = st.session_state.get(session_path_key)
     if path:
         st.caption(f"Ready: **{Path(path).name}**")
@@ -134,9 +155,17 @@ def upload_files_to_dir_picker(
         help=help_text
         or f"Select one or more files, or a .zip archive. {UPLOAD_SIZE_HELP}",
     )
+    fingerprint_key = _fingerprint_session_key(uploader_key)
     if uploads:
-        work_dir = materialize_uploads_to_dir(list(uploads), uploader_key)
-        st.session_state[session_dir_key] = str(work_dir)
+        fingerprint = _uploads_fingerprint(list(uploads))
+        if st.session_state.get(fingerprint_key) != fingerprint:
+            with st.spinner("Preparing uploaded files (extracting archives if needed)…"):
+                work_dir = materialize_uploads_to_dir(list(uploads), uploader_key)
+            st.session_state[session_dir_key] = str(work_dir)
+            st.session_state[fingerprint_key] = fingerprint
+    else:
+        st.session_state.pop(session_dir_key, None)
+        st.session_state.pop(fingerprint_key, None)
     path = st.session_state.get(session_dir_key)
     if path:
         st.caption("Upload prepared.")

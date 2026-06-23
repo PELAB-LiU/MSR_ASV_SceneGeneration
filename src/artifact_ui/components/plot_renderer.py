@@ -4,12 +4,41 @@ from __future__ import annotations
 
 import io
 import warnings
-from typing import Optional, Union
+from typing import List, Optional, Union
 
-import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import streamlit as st
 from matplotlib.figure import Figure
+
+from logical_level.constraint_satisfaction.evaluation_data import \
+    EvaluationData
+
+
+def list_eval_plot_names(eval_datas: List[EvaluationData]) -> List[str]:
+    from visualization.evaluation_plots.eval_plot_registry import \
+        list_eval_plot_names as _list_names
+
+    return _list_names(eval_datas)
+
+
+def get_eval_plot_description(plot_name: str) -> str:
+    from visualization.evaluation_plots.eval_plot_registry import \
+        EVAL_PLOT_DESCRIPTIONS
+
+    return EVAL_PLOT_DESCRIPTIONS.get(
+        plot_name,
+        "Paper-style figure generated from the loaded evaluation measurements.",
+    )
+
+
+def build_eval_plot_figure(
+    eval_datas: List[EvaluationData],
+    plot_name: str,
+) -> "Figure":
+    from visualization.evaluation_plots.eval_plot_registry import \
+        build_eval_plot_figure as _build
+
+    return _build(eval_datas, plot_name)
 
 
 def matplotlib_to_plotly(fig: Figure) -> go.Figure:
@@ -26,8 +55,13 @@ def matplotlib_to_plotly(fig: Figure) -> go.Figure:
 
 
 def figure_to_png_bytes(fig: Figure, *, dpi: int = 150) -> bytes:
+    import matplotlib.pyplot as plt
+
     buffer = io.BytesIO()
-    fig.savefig(buffer, format="png", bbox_inches="tight", dpi=dpi)
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore", category=UserWarning)
+        fig.savefig(buffer, format="png", bbox_inches="tight", dpi=dpi)
+    plt.close(fig)
     return buffer.getvalue()
 
 
@@ -118,4 +152,6 @@ def render_figure(
             )
 
     if close_matplotlib and source_figure is not None:
+        import matplotlib.pyplot as plt
+
         plt.close(source_figure)

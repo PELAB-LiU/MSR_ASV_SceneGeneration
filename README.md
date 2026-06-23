@@ -3,19 +3,19 @@
 Research software and **MODELS26 artifact evaluation package** for generating and evaluating initial scenes for Autonomous Surface Vehicle (ASV) scenario-based assurance. The project implements genetic algorithms, rejection sampling, and evolutionary computation for scene generation using the **MSR** and **DC** approaches, with detailed visualization and statistical evaluation tooling.
 
 This repository is supplementary material for the paper **Automated Generation of Functionally Complete Assurance Suites for COLREGS-Compliance of Autonomous Surface Vehicles**.
+![Image is available at assets/images/msr_only_overview.png](./assets/images/msr_only_overview.png)
 
 ## Zenodo archives
 
 Published MODELS26 artifacts on Zenodo (for reviewers and offline use):
 
-| Artifact | Zenodo record | License |
-|----------|---------------|---------|
-| Software code | [10.5281/zenodo.19246756](https://doi.org/10.5281/zenodo.19246756) | MIT |
-| Measurement data | [10.5281/zenodo.20792733](https://doi.org/10.5281/zenodo.20792733) | CC-BY 4.0 |
+| Artifact | Zenodo record | Version | License |
+|----------|---------------|---------|---------|
+| Software code | [10.5281/zenodo.19246756](https://doi.org/10.5281/zenodo.19246756) | Version 3.0 | MIT |
+| Measurement data | [10.5281/zenodo.20792733](https://doi.org/10.5281/zenodo.20792733) | Version 1.0 | CC-BY 4.0 |
 
 Download `MSR_ASV_SceneGeneration-main.zip` from the software record, or clone from GitHub (see [Installation](#installation)). Load measurement files from the data record via **Data Manager -> Download from Zenodo**, or upload a downloaded `.pkl.gz` manually.
 
-![Image is available at assets/images/msr_only_overview.png](./assets/images/msr_only_overview.png)
 
 ---
 
@@ -162,7 +162,7 @@ Docker provides a reproducible environment matching the MODELS26 artifact evalua
 
 #### Zenodo dataset
 
-The default measurement-data DOI from [Zenodo archives](#zenodo-archives) is hardcoded in `src/utils/artifact_config.py` and used by **Data Manager → Download from Zenodo**.
+The default measurement-data DOI from [Zenodo archives](#zenodo-archives) is hardcoded in `src/utils/artifact_config.py` and used by **Data Manager -> Download from Zenodo**.
 
 #### Docker troubleshooting
 
@@ -276,6 +276,28 @@ A full desktop Ubuntu install may already include these packages. If `python scr
    set ENABLE_RRT_ANIMATION=false
    ```
 
+   Windows (PowerShell):
+
+   ```powershell
+   $env:PYTHONPATH = "src"
+   $env:ARTIFACT_DATA_DIR = ".\data"
+   $env:ARTIFACT_OUTPUT_DIR = ".\output"
+   $env:MPLBACKEND = "Agg"
+   $env:ENABLE_RRT_ANIMATION = "false"
+   ```
+
+   Windows (Git Bash): use the same `export` syntax as Linux/macOS:
+
+   ```bash
+   export PYTHONPATH=src
+   export ARTIFACT_DATA_DIR=./data
+   export ARTIFACT_OUTPUT_DIR=./output
+   export MPLBACKEND=Agg
+   export ENABLE_RRT_ANIMATION=false
+   ```
+
+   `PYTHONPATH` is optional for the Streamlit entry point (`app.py` adds `src/` automatically), but other CLI scripts still need it.
+
    Create data directories:
 
    ```bash
@@ -355,7 +377,7 @@ Many pages require a **loaded dataset** (a `.pkl.gz` file selected in **Data Man
 ### Home
 
 - Introduces the MODELS26 artifact goals and badge targets (**Artifact Evaluated: Reusable**, **Artifact Available**).
-- Explains the recommended **compress -> annotate -> load** workflow with a diagram (`assets/images/usage.png`).
+- Explains the recommended data workflow with a diagram (`assets/images/usage.svg`): generate -> compress -> annotate -> load, or load from Zenodo directly, then analyze.
 - Lists a **kick-the-tires checklist** and a **global time budget** table (worst-case formulas for scene generation, hyperparameter tuning, trajectories, and data utilities).
 
 ### Data Manager
@@ -399,9 +421,15 @@ Requires a loaded dataset.
 
 Requires a loaded dataset.
 
-- Lists all **paper-style evaluation plots** available for the current data (success rates, runtimes, risk metrics, statistical comparisons: driven by `visualization/evaluation_plots/`).
-- **Generate plot** builds the selected figure with a progress indicator.
-- Displays static and interactive versions; supports PNG/HTML download.
+- Choose one of four **paper-style figures** (see descriptions below), then click **Generate plot**.
+- Displays static matplotlib PNG and an interactive **Plotly** version; supports PNG/HTML download.
+
+| Plot | Description |
+|------|-------------|
+| **Relevant Coverage Evolution** | Cumulative **relevant FEC coverage** (%) over wall-clock evaluation time for each paper approach, vessel count, and random seed. Shows how quickly each configuration discovers new functionally relevant equivalence classes. |
+| **Relevant Coverage** | Final **relevant FEC coverage** (%) per approach and vessel count after all scheduled scenarios finish. Bars aggregate seeds; asterisks mark statistically significant pairwise differences (Mann–Whitney U with effect size). |
+| **Time to 100% Coverage** | Wall-clock time until **100% of relevant FECs** are covered for each approach and vessel count. Only runs that reach full coverage contribute; compares how long complete assurance-suite generation takes across configurations. |
+| **Time Per Eqv Class** | Mean evaluation time per **newly covered relevant equivalence class** (graph-shape hash), averaged over seeds. Lower values indicate faster discovery of distinct functional scenarios; includes statistical comparison markers. |
 
 ### Scene Generation
 
@@ -448,15 +476,28 @@ Requires a loaded dataset.
 
 ## Recommended data workflow
 
-Scene generation produces many separate JSON files on the server. For practical analysis inside the UI:
+Scene generation produces many separate JSON files on the server. For practical analysis inside the UI, use a single compressed, annotated `.pkl.gz` archive:
 
-![Image is available at assets/images/usage.png](./assets/images/usage.png)
+![Usage workflow](./assets/images/usage.svg)
 
-1. **Scene Generation** (or Zenodo download) provides raw measurements.
-2. **Compress** merges files into one `.pkl.gz` (loading millions of individual JSON files in the browser would be impractical).
-3. **Annotate hash** adds graph-shape hash fields for functional equivalence-class analysis (must run on the full compressed archive).
-4. **Load** registers the processed `.pkl.gz` as the active dataset.
-5. Use **Scenario Browser**, **Evaluation Plots**, and **Trajectories** on the loaded data.
+### Generate your own measurements
+
+1. **Scene Generation**: run a job and download the result zip.
+2. **Data Manager -> Compress**: merge JSON into one `.pkl.gz` and download.
+3. **Data Manager -> Annotate hash**: add graph-shape hash fields for functional equivalence-class analysis (must run on the full compressed archive); download when done.
+4. **Data Manager -> Load**: activate the annotated `.pkl.gz` as the active dataset.
+
+### Use the published Zenodo dataset
+
+1. **Data Manager -> Load**: download from Zenodo and load a pre-annotated `.pkl.gz` (skips compress and annotate).
+
+### Analyze the active dataset
+
+Use **Scenario Browser**, **Evaluation Plots**, **Trajectories**, and **Hyperparam Evaluation** on the loaded data.
+
+### Optional utility
+
+- **Data Manager -> Unzip**: export human-readable JSON from a loaded archive.
 
 ---
 
@@ -465,11 +506,21 @@ Scene generation produces many separate JSON files on the server. For practical 
 Designed to complete on a commodity laptop without full paper-scale runtime:
 
 1. Start the demonstrator (`docker compose up --build` or local Streamlit).
-2. **Data Manager -> Load**: upload a small `.pkl.gz` or download from Zenodo (if bandwidth allows; Zenodo download may take longer than 30 minutes for the full dataset).
+
+**Explore published data (fastest)**
+
+2. **Data Manager -> Load**: download from Zenodo and load a pre-annotated `.pkl.gz`, or upload a small archive from your computer (full Zenodo download may exceed 30 minutes on slow links).
 3. **Scenario Browser**: inspect the table; render one COLREG scene.
 4. **Evaluation Plots**: generate one plot type from the loaded dataset.
-5. **Scene Generation**: minimal run: **1 seed**, **1 approach** (e.g. MSR CDRS+PS), **2 or 3 vessels**, **1 core**.
-6. Optional: **Trajectories** on one record; **Data Manager** compress/annotate on a small upload.
+
+**Try the generation pipeline (optional)**
+
+5. **Scene Generation**: minimal run: **1 seed**, **1 approach** (e.g. MSR CDRS+PS), **2 or 3 vessels**, **1 core**; download the result zip when the job finishes.
+6. **Data Manager -> Compress**, then **Annotate hash**, then **Load** the processed archive (see [recommended data workflow](#recommended-data-workflow)).
+
+**Optional**
+
+7. **Trajectories** on one record; **Hyperparam Evaluation** on uploaded tuning JSON; **Unzip** for human-readable JSON exports.
 
 The **Home** page lists worst-case time formulas so you can verify estimates before starting long jobs.
 
@@ -512,7 +563,7 @@ See also `REQUIREMENTS.md`.
 | CPU | 4 cores | 8+ cores |
 | RAM | 8 GB | 32 GB |
 | Disk | 10 GB free | 50+ GB if storing full Zenodo download and generation output |
-| Display | Not required | Web browser only |
+| Display | Web browser only | Same |
 | Docker | Engine 24+, Compose v2 | Same |
 | Python (non-Docker) | 3.12 | 3.12 |
 

@@ -8,23 +8,31 @@ type: software
 license: MIT
 repository-code: https://github.com/PELAB-LiU/MSR_ASV_SceneGeneration
 url: https://github.com/PELAB-LiU/MSR_ASV_SceneGeneration
-version: 1.0.0
+version: 3.0.0
 date-released: 2026-06-22
 keywords:
-  - autonomous surface vehicles
-  - COLREGS
   - scenario generation
-  - assurance
+  - initial scene generation
+  - COLREGS
+  - functional completeness
   - MSR
+  - multi-step refinement
   - search-based testing
+  - genetic algorithms
   - rejection sampling
+  - assurance suite
+  - assurance
+
 authors:
   - family-names: Frey
     given-names: Dominik
     orcid: https://orcid.org/0009-0007-7174-4209
+    affiliation: Linköping University
   - family-names: Kargén
     given-names: Ulf
     orcid: https://orcid.org/0000-0002-3009-4314
+    affiliation: Linköping University
   - family-names: Varró
     given-names: Dániel
     orcid: https://orcid.org/0000-0002-8790-252X
+    affiliation: Linköping University

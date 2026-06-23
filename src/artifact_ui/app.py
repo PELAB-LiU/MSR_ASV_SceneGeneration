@@ -1,9 +1,18 @@
+import sys
+from pathlib import Path
+
+_SRC_ROOT = Path(__file__).resolve().parent.parent
+if str(_SRC_ROOT) not in sys.path:
+    sys.path.insert(0, str(_SRC_ROOT))
+
 import streamlit as st
 
-from artifact_ui.components.job_runner import get_active_job_state
-from artifact_ui.components.running_state import (init_session_state,
-                                                  render_global_status_bar,
-                                                  render_job_panel)
+from artifact_ui.components.job_runner import get_active_job_state  # noqa: E402
+from artifact_ui.components.running_state import (  # noqa: E402
+    init_session_state,
+    render_global_status_bar,
+    render_job_panel,
+)
 
 st.set_page_config(
     page_title="Automated Generation of Functionally Complete Assurance Suites for COLREGS-Compliance of Autonomous Surface Vehicles: MODELS26 Artifact",

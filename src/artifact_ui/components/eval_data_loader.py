@@ -2,12 +2,15 @@
 
 from __future__ import annotations
 
+import contextlib
+import io
 from pathlib import Path
 from typing import Callable, List, Optional
 
 import pandas as pd
 import streamlit as st
 
+from artifact_ui.components.log_view import render_scrollable_log
 from concrete_level.data_parser import EvalDataParser, ProgressCallback
 from logical_level.constraint_satisfaction.evaluation_data import \
     EvaluationData
@@ -25,12 +28,63 @@ HIDDEN_DF_COLUMNS = {
 def invalidate_eval_data_cache() -> None:
     st.session_state.pop("eval_datas_cache_key", None)
     st.session_state.pop("eval_datas_cache", None)
+    st.session_state.pop("eval_browse_df_cache_key", None)
+    st.session_state.pop("eval_browse_df_cache", None)
     st.session_state.pop("eval_plot_figure", None)
     st.session_state.pop("eval_plot_png", None)
     st.session_state.pop("eval_plot_name", None)
     st.session_state.pop("colreg_scene_index", None)
     st.session_state.pop("colreg_scene_png", None)
     st.session_state.pop("colreg_scene_plotly", None)
+    st.session_state.pop("compress_estimate_count", None)
+
+
+def _invalidate_browse_df_cache() -> None:
+    st.session_state.pop("eval_browse_df_cache_key", None)
+    st.session_state.pop("eval_browse_df_cache", None)
+
+
+def is_eval_datas_cached(
+    *,
+    pkl_path: Optional[str] = None,
+    input_dirs: Optional[List[str]] = None,
+) -> bool:
+    if pkl_path:
+        cache_key = _cache_key_for_pkl(pkl_path)
+    elif input_dirs:
+        cache_key = _cache_key_for_dirs(input_dirs)
+    else:
+        return False
+    return (
+        st.session_state.get("eval_datas_cache_key") == cache_key
+        and st.session_state.get("eval_datas_cache") is not None
+    )
+
+
+def render_dataset_loader(pkl_path: str, *, key_prefix: str) -> Optional[List[EvaluationData]]:
+    """Load evaluation data on demand; return None until the user clicks Load."""
+    name = Path(pkl_path).name
+    if is_eval_datas_cached(pkl_path=pkl_path):
+        count = len(st.session_state.eval_datas_cache)
+        status_col, action_col = st.columns([4, 1])
+        with status_col:
+            st.success(f"**{name}** in memory ({count} records).")
+        with action_col:
+            if st.button("Reload", key=f"{key_prefix}_reload"):
+                _invalidate_browse_df_cache()
+                load_eval_datas_cached(pkl_path=pkl_path, force_reload=True)
+                st.rerun()
+        return st.session_state.eval_datas_cache
+
+    st.info(
+        f"Active dataset: **{name}**. "
+        "Click **Load dataset** to read it into memory (large archives may take minutes)."
+    )
+    if st.button("Load dataset", key=f"{key_prefix}_load", type="primary"):
+        _invalidate_browse_df_cache()
+        load_eval_datas_cached(pkl_path=pkl_path)
+        st.rerun()
+    return None
 
 
 def _cache_key_for_pkl(pkl_path: str) -> str:
@@ -85,10 +139,6 @@ def load_eval_datas_cached(
         and st.session_state.get("eval_datas_cache_key") == cache_key
         and st.session_state.get("eval_datas_cache") is not None
     ):
-        count = len(st.session_state.eval_datas_cache)
-        st.info(
-            f"Using cached evaluation data ({count} records). Change dataset to reload."
-        )
         return st.session_state.eval_datas_cache
 
     progress_bar = st.progress(0.0, text="Preparing to load evaluation data…")
@@ -160,11 +210,20 @@ def eval_datas_to_dataframe(
 
 def load_eval_dataframe_cached(pkl_path: str) -> pd.DataFrame:
     eval_datas = load_eval_datas_cached(pkl_path=pkl_path)
+    df_cache_key = f"df:{st.session_state.get('eval_datas_cache_key', '')}"
+    if (
+        st.session_state.get("eval_browse_df_cache_key") == df_cache_key
+        and st.session_state.get("eval_browse_df_cache") is not None
+    ):
+        return st.session_state.eval_browse_df_cache
+
     progress_bar = st.progress(0.0, text="Building table view…")
     detail_slot = st.empty()
     callback = _make_streamlit_progress(progress_bar, detail_slot)
     dataframe = eval_datas_to_dataframe(eval_datas, progress_callback=callback)
     progress_bar.progress(1.0, text=f"Table ready: {len(dataframe)} rows")
+    st.session_state.eval_browse_df_cache_key = df_cache_key
+    st.session_state.eval_browse_df_cache = dataframe
     return dataframe
 
 
@@ -172,15 +231,60 @@ def load_eval_datas_from_dirs_cached(input_dirs: List[str]) -> List[EvaluationDa
     return load_eval_datas_cached(input_dirs=input_dirs)
 
 
+def render_plot_generation_log(
+    log_text: str,
+    *,
+    use_expander: bool = True,
+    expanded: bool = False,
+    key: str = "plot_generation_log",
+) -> None:
+    """Show captured plot-build stdout in a scrollable, read-only text area."""
+    if not log_text:
+        return
+
+    def _body() -> None:
+        render_scrollable_log(
+            log_text,
+            height=220,
+            label="Plot generation log",
+            key=key,
+        )
+
+    if use_expander:
+        with st.expander("Generation log", expanded=expanded):
+            _body()
+    else:
+        st.markdown("**Generation log**")
+        _body()
+
+
 def with_plot_generation_progress(
     plot_name: str,
     build_fn: Callable[[], object],
 ):
     progress_bar = st.progress(0.0, text=f"Preparing plot: {plot_name}…")
-    detail_slot = st.empty()
-    detail_slot.caption(
-        "Aggregating loaded evaluation records into plot (may take a minute)."
-    )
-    result = build_fn()
+    log_buffer = io.StringIO()
+    with st.status(f"Generating plot: {plot_name}", expanded=True) as status:
+        st.caption(
+            "Aggregating loaded evaluation records into the figure "
+            "(statistical test output appears in the log below)."
+        )
+        with contextlib.redirect_stdout(log_buffer), contextlib.redirect_stderr(
+            log_buffer
+        ):
+            result = build_fn()
+        log_text = log_buffer.getvalue().strip()
+        if log_text:
+            render_plot_generation_log(
+                log_text,
+                use_expander=False,
+                key="plot_generation_log_active",
+            )
+        else:
+            st.write("No log output from plot generation.")
+        status.update(label=f"Plot ready: {plot_name}", state="complete")
+
     progress_bar.progress(1.0, text=f"Plot ready: {plot_name}")
+    st.session_state.eval_plot_generation_log = log_text
+    st.session_state.eval_plot_log_in_status = bool(log_text)
     return result

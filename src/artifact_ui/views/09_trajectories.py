@@ -1,7 +1,7 @@
 import streamlit as st
 
 from artifact_ui.components.dataset_state import require_active_dataset
-from artifact_ui.components.eval_data_loader import load_eval_datas_cached
+from artifact_ui.components.eval_data_loader import render_dataset_loader
 from artifact_ui.components.running_state import (disable_if_job_running,
                                                   launch_job)
 from artifact_ui.components.time_estimator import (estimate_trajectory,
@@ -10,8 +10,10 @@ from artifact_ui.components.time_estimator import (estimate_trajectory,
 st.title("Trajectory Generation")
 
 pkl_path = require_active_dataset()
+eval_datas = render_dataset_loader(str(pkl_path), key_prefix="trajectories")
+if eval_datas is None:
+    st.stop()
 
-eval_datas = load_eval_datas_cached(pkl_path=str(pkl_path))
 record_index = st.number_input(
     "Record index",
     min_value=0,

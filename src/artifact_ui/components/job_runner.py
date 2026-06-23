@@ -99,5 +99,4 @@ def get_active_job_state(active_job_id: Optional[str]) -> Optional[JobState]:
 def job_is_running(state: Optional[JobState]) -> bool:
     if state is None:
         return False
-    refreshed = refresh_job_state(Path(state.job_dir))
-    return refreshed.status in {"queued", "running"}
+    return state.status in {"queued", "running"}

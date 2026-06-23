@@ -22,8 +22,8 @@ st.title("Data Manager")
 config = ArtifactConfig.from_env()
 config.ensure_dirs()
 
-tab_compress, tab_load, tab_annotate, tab_unzip = st.tabs(
-    ["Compress", "Load", "Annotate Hash", "Unzip"]
+tab_compress, tab_annotate, tab_load, tab_unzip = st.tabs(
+    ["Compress", "Annotate Hash", "Load", "Unzip"]
 )
 
 with tab_compress:
@@ -45,10 +45,14 @@ with tab_compress:
     )
     record_count = 0
     if active_dataset_name():
-        with st.expander("Estimate from active dataset (loads with progress)"):
-            pkl_path = require_active_dataset()
-            eval_datas = load_eval_datas_cached(pkl_path=pkl_path)
-            record_count = len(eval_datas)
+        with st.expander("Estimate from active dataset"):
+            if st.button("Load active dataset for estimate", key="compress_estimate_load"):
+                pkl_path = require_active_dataset()
+                eval_datas = load_eval_datas_cached(pkl_path=pkl_path)
+                st.session_state.compress_estimate_count = len(eval_datas)
+            record_count = st.session_state.get("compress_estimate_count", 0)
+            if record_count:
+                st.caption(f"Loaded record count: **{record_count}**")
     estimate = estimate_data_utility(record_count or 100)
     st.caption(
         f"Estimated time: worst: {format_duration(estimate.worst_case_seconds)}, "

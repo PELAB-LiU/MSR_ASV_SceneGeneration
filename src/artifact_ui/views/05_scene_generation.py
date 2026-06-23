@@ -25,8 +25,14 @@ Two generation workflows are compared in the paper:
 - **MSR**: uses functional models (FSMs) from Refinery; required for CDRS/CDRS+PS variants.
 
 Each pickable configuration below matches one row of *Table: Configurations of compared approaches*
-in the paper. Configurations not evaluated in the paper (e.g. MSR+NSGA-II) are omitted from this list.
+in the paper.
 """)
+
+minimal_label = APPROACH_LABELS[MSR_CDRS_PS]
+st.caption(
+    f"**Kick-the-tires minimal run:** {minimal_label}, **2 vessels**, "
+    "**1 seed**, **1 core** (defaults below)."
+)
 
 with st.expander("Compared approach configurations (paper Table)", expanded=False):
     for approach_id in PAPER_APPROACH_OPTIONS:
@@ -42,10 +48,10 @@ approaches = st.multiselect(
     options=PAPER_APPROACH_OPTIONS,
     default=[MSR_CDRS_PS],
     format_func=lambda key: APPROACH_LABELS.get(key, key),
-    help="Only configurations from the paper evaluation are selectable.",
+    help="Configurations from the paper evaluation are selectable.",
 )
 
-vessel_counts = st.multiselect("Vessel counts", options=[2, 3, 4, 5, 6], default=[3])
+vessel_counts = st.multiselect("Vessel counts", options=[2, 3, 4, 5, 6], default=[2])
 st.text_input("Obstacle count", value="0 (fixed)", disabled=True)
 
 st.markdown("""
